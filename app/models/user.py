@@ -33,7 +33,7 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            'character_pfp': self.character_pfp,
-            'bio': self.bio,
-            'country_code': self.country_code
+            # 'character_pfp': self.character_pfp,
+            # 'bio': self.bio,
+            # 'country_code': self.country_code
         }
