@@ -7,5 +7,5 @@ home_route = Blueprint('home', __name__)
 @home_route.route('/')
 def home():
     games = Game.query.all()
+    # print(games)
     return {'games': [game.to_dict() for game in games]}
-
