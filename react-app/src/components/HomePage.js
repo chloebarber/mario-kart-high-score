@@ -16,12 +16,20 @@ function HomePage() {
         })();
     }, []);
 
-    return (
-        <ul>
-            <li>
-                <strong>Game 1</strong> {games[0]}
-            </li>
-        </ul>
-    );
+    if(games){
+        return (
+            <ul>
+                <li>
+                    <strong>Game 1</strong> {games[0]}
+                </li>
+            </ul>
+        );
+    }
+    else{
+        return (
+            <h1>Loading...</h1>
+        )
+    }
+    
 }
 export default HomePage;
