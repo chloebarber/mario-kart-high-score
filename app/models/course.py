@@ -13,6 +13,10 @@ class Course(db.Model):
     cup = db.Column(db.String, nullable=False)
     cup_order = db.Column(db.Integer, nullable=False)
 
+    game = db.relationship("Game", back_populates="course")
+    comments = db.relationship("Comment", back_populates="course")
+    records = db.relationship("Record", back_populates="course")
+
     def to_dict(self):
         return {
             'id': self.id,

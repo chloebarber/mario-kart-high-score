@@ -8,4 +8,4 @@ class Game(db.Model):
     description = db.Column(db.string, nullable=False)
     splash_image = db.Column(db.string)
 
-    game = db.relationship("Game", back_populates="relationship variable name in courses")
+    course = db.relationship("Course", back_populates="game")

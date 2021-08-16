@@ -11,6 +11,9 @@ class Record(db.Model):
     time = db.Column(db.Integer, nullable=False)
     character = db.Column(db.String, nullable=False)
 
+    course = db.relationship("Course", back_populates="records")
+    user = db.relationship("User", back_populates="records")
+
     def to_dict(self):
         return {
             'id': self.id,

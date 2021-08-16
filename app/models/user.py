@@ -14,6 +14,9 @@ class User(db.Model, UserMixin):
     bio = db.Text(db.String, nullable=False)
     country_code = db.Integer(db.Integer)
 
+    records = db.relationship("Record", back_populates="user")
+    comments = db.relationship("Comment", back_populates="user")
+
     @property
     def password(self):
         return self.hashed_password
@@ -30,7 +33,7 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            'character_pfp': = self.character_pfp,
-            'bio': = self.bio,
+            'character_pfp': self.character_pfp,
+            'bio': self.bio,
             'country_code': self.country_code
         }
