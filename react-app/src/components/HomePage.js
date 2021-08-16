@@ -8,7 +8,6 @@ function HomePage() {
     // const dispatch = useDispatch()
 
     useEffect(() => {
-
         (async () => {
             const response = await fetch(`/api/home`);
             const gameList = await response.json();
