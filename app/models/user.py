@@ -10,9 +10,9 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
-    character_pfp = db.Enum(db.String, nullable=False)
-    bio = db.Text(db.String, nullable=False)
-    country_code = db.Integer(db.Integer)
+    character_pfp = db.Column(db.String)
+    bio = db.Column(db.String)
+    country_code = db.Column(db.Integer)
 
     records = db.relationship("Record", back_populates="user")
     comments = db.relationship("Comment", back_populates="user")
