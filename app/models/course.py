@@ -10,7 +10,7 @@ class Course(db.Model):
     splash_img = db.Column(db.String, nullable=False)
     map_img = db.Column(db.String, nullable=False)
     game_id = db.Column(db.Integer, db.ForeignKey("games.id"),  nullable=False)
-    cup = db.Column(db.String, nullable=False)
+    cup = db.Column(db.Integer, nullable=False)
     cup_order = db.Column(db.Integer, nullable=False)
 
     game = db.relationship("Game", back_populates="course")

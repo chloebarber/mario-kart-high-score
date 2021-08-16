@@ -32,7 +32,7 @@ def upgrade():
     sa.Column('splash_img', sa.String(), nullable=False),
     sa.Column('map_img', sa.String(), nullable=False),
     sa.Column('game_id', sa.Integer(), nullable=False),
-    sa.Column('cup', sa.String(), nullable=False),
+    sa.Column('cup', sa.Integer(), nullable=False),
     sa.Column('cup_order', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['game_id'], ['games.id'], ),
     sa.PrimaryKeyConstraint('id')
