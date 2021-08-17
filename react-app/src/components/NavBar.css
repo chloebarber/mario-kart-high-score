@@ -4,12 +4,13 @@
     height: 100px;
     /* justify-items: center;
     align-items: center; */
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-        "home home . . . . . . . login"
-        ". . . .  . . . user signup logout"
+        "home home . . . . . user signup login"
+        "home home . .  . . . . . logout"
 }
 
 .home-link {
