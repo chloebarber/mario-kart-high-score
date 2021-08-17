@@ -1,5 +1,6 @@
 const GET_GAMES = 'games/GET_GAMES';
 const GET_COURSES = 'courses/GET_COURSES'
+const GET_COURSE_INFO = 'courses/GET_COURSE_INFO'
 
 const loadGames = (games) => {
     return {
@@ -11,7 +12,14 @@ const loadGames = (games) => {
 const loadCourses = (courses) => {
     return {
         type: GET_COURSES,
-        courses
+        courses,
+    }
+}
+
+const loadCourseInfo = (courseInfo) => {
+    return {
+        type: GET_COURSES,
+        courseInfo,
     }
 }
 
@@ -27,13 +35,22 @@ export const getGames = () => async (dispatch) => {
     }
 }
 
-export const getCourses = (gameId) => async (dispatch) => {
+export const getCoursesForGame = (gameId) => async (dispatch) => {
     const response = await fetch(`/api/game/${gameId}`)
 
     if (response.ok) {
         const courses = await response.json()
-        console.log(courses)
         await dispatch(loadCourses(courses))
+        return response
+    }
+}
+
+export const getCourseInfo = (courseId) => async (dispatch) => {
+    const response = await fetch(`/api/course/${courseId}`)
+
+    if (response.ok) {
+        const courseInfo = await response.json()
+        await dispatch(loadCourseInfo(courseInfo))
         return response
     }
 }
@@ -59,6 +76,15 @@ export default function games(state = initialState, action) {
                 allCourses[course.id] = course;
             });
             newState = {...allCourses}
+            return newState;
+        }
+
+        case GET_COURSE_INFO: {
+            const courseInfo = {};
+            action.courseInfo.courseInfo.forEach(course => {
+                courseInfo[course.id] = course;
+            });
+            newState = {...courseInfo}
             return newState;
         }
 
