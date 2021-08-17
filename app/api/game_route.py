@@ -1,11 +1,11 @@
 from flask import Blueprint
 from app.models import Game
 
-home_route = Blueprint('home', __name__)
+game_route = Blueprint('game', __name__)
 
 
-@home_route.route('/')
-def home():
+@game_route.route('/')
+def games():
     games = Game.query.all()
     # print(games)
     return {'games': [game.to_dict() for game in games]}
