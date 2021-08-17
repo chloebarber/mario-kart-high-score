@@ -1,44 +1,36 @@
-import { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom'
-import { getAllGames } from '../store/game'
-
+import { getGames } from '../store/game'
 
 
 function HomePage() {
-    const [games, setGames] = useState();
+    const games = useSelector(state => Object.values(state.games))
+    // const gamesArray = Object.values(games)
     const dispatch = useDispatch()
 
-    const gameList = useSelector((state) => Object.values(state.game))
-    console.log(gameList)
-    // useEffect(() => {
-    //     (async () => {
-    //         const response = await fetch('/api/home');
-    //         const gameList = await response.json();
-    //         setGames(gameList);
-    //     })();
-    // }, []);
-
     useEffect(() => {
-        dispatch(getAllGames())
+        dispatch(getGames())
     }, [dispatch]);
 
+    return (
+        <>
+            <div>
+                {games.map(game => (
+                    <a href={`/games/${game.id}`} id={game.id}>
+                        <div>
+                            <img src={game.splash_image} className='splash-image' alt='gamePic' />
+                            <div>
+                                <div><h3>{game.game_name}</h3></div>
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </>
 
-    if (games) {
-        return (
-            <ul>
-                <li>
-                    {/* <strong>Game 1</strong> {games[0]} */}
-                    <Link to={`/games/${games.id}`}>{games.description}</Link> // ! fix
-                </li>
-            </ul>
-        );
-    }
-    else {
-        return (
-            <h1>Loading...</h1>
-        )
-    }
 
+
+
+    )
 }
 export default HomePage;
