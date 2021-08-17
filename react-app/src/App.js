@@ -43,7 +43,6 @@ function App() {
           <User />
         </ProtectedRoute>
         <Route path='/' exact={true} >
-          <h1>My Home Page</h1>
           <HomePage />
         </Route>
         <Route path='/games/:gameId' exact={true}>
