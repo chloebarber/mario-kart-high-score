@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCoursesForGame } from '../store/game'
+import { getCoursesForGame } from '../../store/game'
 import { useParams } from 'react-router-dom';
 
 
