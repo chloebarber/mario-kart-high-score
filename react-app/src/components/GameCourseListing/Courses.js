@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCoursesForGame } from '../../store/game'
+import { getCoursesForGame } from '../../store/courses'
 import { useParams } from 'react-router-dom';
 
 
 function Courses() {
-    const courses = useSelector(state => Object.values(state.games))
+    const courses = useSelector((state) => state.courses)
     // const gamesArray = Object.values(games)
     const dispatch = useDispatch()
     const {gameId} = useParams();
@@ -14,11 +14,12 @@ function Courses() {
         dispatch(getCoursesForGame(gameId))
     }, [dispatch]);
 
-    // return (<h1>YAY</h1> )
-    return (
-        <>
-            <div>
-                {courses.map(course => (
+
+    function courseListing(){
+        if (courses.courses){
+            return (
+                <>
+                {courses.courses.map(course => (
                     <a href={`/course/${course.id}`} id={course.id}>
                         <div>
                             <img src={course.splash_img} className='splash-course-image' alt='coursePic' />
@@ -28,6 +29,15 @@ function Courses() {
                         </div>
                     </a>
                 ))}
+                </>
+            )
+        }
+    }
+
+    return (
+        <>
+            <div>
+                {courseListing()}
             </div>
         </>
 

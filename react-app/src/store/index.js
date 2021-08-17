@@ -2,10 +2,14 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import session from './session'
 import games from './game'
+import courses from './courses'
+import courseInfo from './courseInfo'
 
 const rootReducer = combineReducers({
   session,
-  games //fix this later, courses should be its own reducer
+  games,
+  courses,
+  courseInfo,
 });
 
 
