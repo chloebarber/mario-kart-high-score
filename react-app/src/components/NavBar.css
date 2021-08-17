@@ -1,35 +1,35 @@
 .nav-bar-container {
-    background-color: pink;
+    background: rgb(83,79,77);
+    background: linear-gradient(0deg, rgba(83,79,77,1) 30%, rgba(255,255,255,1) 100%);
+    height: 100px;
+    /* justify-items: center;
+    align-items: center; */
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(9, 1fr);
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "home home . . . . . . . login"
+        ". . . .  . . . user signup logout"
 }
 
 .home-link {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 4;
+    grid-area: home;
 }
 
 .login-link {
-    grid-column: 9;
-    grid-row: 1;
+    grid-area: login;
 }
 
 .sign-up-link {
-    grid-column: 9;
-    grid-row: 2;
+    grid-area: signup;
 }
 
 .users-link {
-    grid-column: 9;
-    grid-row: 3;
+    grid-area: user;
 }
 
 .logout-button-link {
-    grid-column-start: 9;
-    grid-row: 4;
+    grid-area: logout;
 }
 
 li {
