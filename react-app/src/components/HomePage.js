@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getGames } from '../store/game'
+import './HomePage.css';
 
 
 function HomePage() {
@@ -14,16 +15,17 @@ function HomePage() {
 
     return (
         <>
-            <div>
+            <h1>Mario Kart Records</h1>
+            <div className = "gameListing">
                 {games.map(game => (
-                    <a href={`/games/${game.id}`} id={game.id}>
-                        <div>
+                    <div className = {`game${game.id}`}>
+                        <a href={`/games/${game.id}`} id={game.id}>
                             <img src={game.splash_image} className='splash-image' alt='gamePic' />
-                            <div>
+                            {/* <div>
                                 <div><h3>{game.game_name}</h3></div>
-                            </div>
-                        </div>
-                    </a>
+                            </div> */}
+                        </a>
+                    </div>
                 ))}
             </div>
         </>
