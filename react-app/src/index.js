@@ -6,7 +6,9 @@ import App from './App';
 import configureStore from './store';
 import game from './store'
 
+
 const store = configureStore();
+
 
 ReactDOM.render(
   <React.StrictMode>

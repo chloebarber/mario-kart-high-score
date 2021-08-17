@@ -1,40 +1,38 @@
-// type constants
-const GET_GAMES = 'games/GET_GAMES'
+const GET_GAMES = 'games/GET_GAMES';
 
-
-// action creators
-const setGetGames = (games) => {
+const loadGames = (games) => {
     return {
         type: GET_GAMES,
-        payload: games,
-    }
-}
-
-// thunk creators
-export const getAllGames = () => {
-    return async (dispatch) => {
-        const response = await fetch('/api/home', {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-
-        if (response.ok) {
-            const games = await response.json();
-            dispatch(getAllGames(games));
-        }
+        games,
     }
 }
 
 
-// reducer // ! fix
-const initialstate = {};
-// ! fix
-export default function reducer(state = initialstate, action) {
+export const getGames = () => async (dispatch) => {
+    const response = await fetch('/api/game')
+
+    if (response.ok) {
+        const games = await response.json()
+        console.log(games)
+        await dispatch(loadGames(games))
+        return response
+    }
+}
+
+const initialState = {}
+
+export default function games(state = initialState, action) {
+    let newState;
     switch (action.type) {
-        case GET_GAMES: // ! fix
-            const allGames = Object.fromEntries(action.games.map((game) => [game.game_name])) // ! fix
-            return { ...state, ...allGames }; // ! fix
+        case GET_GAMES: {
+            const allGames = {};
+            action.games.games.forEach(game => {
+                allGames[game.id] = game;
+            });
+            newState = { ...allGames }
+            return newState;
+        }
+
         default:
             return state
     }
