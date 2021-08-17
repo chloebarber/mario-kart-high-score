@@ -17,14 +17,14 @@ class Course(db.Model):
     comments = db.relationship("Comment", back_populates="course")
     records = db.relationship("Record", back_populates="course")
 
-    # def to_dict(self):
-    #     return {
-    #         'id': self.id,
-    #         'name': self.name,
-    #         'description': self.description,
-    #         'splash_img': self.splash_img,
-    #         'map_img': self.map_img,
-    #         'game_id': self.game_id,
-    #         'cup': self.cup,
-    #         'cup_order': self.cup_order
-    #     }
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'splash_img': self.splash_img,
+            'map_img': self.map_img,
+            'game_id': self.game_id,
+            'cup': self.cup,
+            'cup_order': self.cup_order
+        }
