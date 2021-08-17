@@ -1,35 +1,36 @@
-import React, { useState, useEffect } from 'react';
-// import { useDispatch } from 'react-redux';
-
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getGames } from '../store/game'
 
 
 function HomePage() {
-    const [games, setGames] = useState();
-    // const dispatch = useDispatch()
+    const games = useSelector(state => state?.games)
+    const gamesArray = Object.values(games)
+    const dispatch = useDispatch()
 
     useEffect(() => {
+        dispatch(getGames())
+    }, [dispatch]);
 
-        (async () => {
-            const response = await fetch(`/api/home`);
-            const gameList = await response.json();
-            setGames(gameList);
-        })();
-    }, []);
+    return (
+        <>
+            <div>
+                {gamesArray.map(game => (
+                    <a href={`/games/${game.id}`} id={game.id}>
+                        <div>
+                            <img src={game.splash_image} className='splash-image' alt='gamePic' />
+                            <div>
+                                <div><h3>{game.game_name}</h3></div>
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </>
 
-    if(games){
-        return (
-            <ul>
-                <li>
-                    <strong>Game 1</strong> {games[0]}
-                </li>
-            </ul>
-        );
-    }
-    else{
-        return (
-            <h1>Loading...</h1>
-        )
-    }
-    
+
+
+
+    )
 }
 export default HomePage;
