@@ -1,5 +1,6 @@
 body{
     background-image: url("https://static8.depositphotos.com/1176848/894/i/950/depositphotos_8945283-stock-photo-checkerboard-chess-background.jpg");
+    text-align: center;
 }
 
 h1{
@@ -43,9 +44,6 @@ h1{
     border-radius: 10%;
     object-fit: cover;
 }
-
-
-
 
 .game1{
     grid-column: 1;

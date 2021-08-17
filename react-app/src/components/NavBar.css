@@ -1,0 +1,38 @@
+.nav-bar-container {
+    background: rgb(83,79,77);
+    background: linear-gradient(0deg, rgba(83,79,77,1) 30%, rgba(255,255,255,1) 100%);
+    height: 100px;
+    /* justify-items: center;
+    align-items: center; */
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "home home . . . . . user signup login"
+        "home home . .  . . . . . logout"
+}
+
+.home-link {
+    grid-area: home;
+}
+
+.login-link {
+    grid-area: login;
+}
+
+.sign-up-link {
+    grid-area: signup;
+}
+
+.users-link {
+    grid-area: user;
+}
+
+.logout-button-link {
+    grid-area: logout;
+}
+
+li {
+    list-style-type: none;
+}
