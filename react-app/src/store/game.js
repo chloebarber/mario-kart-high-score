@@ -8,7 +8,7 @@ const loadGames = (games) => {
 }
 
 
-export const getGames = () => async(dispatch) => {
+export const getGames = () => async (dispatch) => {
     const response = await fetch('/api/game')
 
     if (response.ok) {
@@ -29,7 +29,7 @@ export default function games(state = initialState, action) {
             action.games.games.forEach(game => {
                 allGames[game.id] = game;
             });
-            newState = {...allGames}
+            newState = { ...allGames }
             return newState;
         }
 

@@ -4,8 +4,8 @@ import { getGames } from '../store/game'
 
 
 function HomePage() {
-    const games = useSelector(state => state?.games)
-    const gamesArray = Object.values(games)
+    const games = useSelector(state => Object.values(state.games))
+    // const gamesArray = Object.values(games)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -15,7 +15,7 @@ function HomePage() {
     return (
         <>
             <div>
-                {gamesArray.map(game => (
+                {games.map(game => (
                     <a href={`/games/${game.id}`} id={game.id}>
                         <div>
                             <img src={game.splash_image} className='splash-image' alt='gamePic' />
