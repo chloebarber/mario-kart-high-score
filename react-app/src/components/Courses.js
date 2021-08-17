@@ -1,17 +1,20 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCourses } from '../store/game'
+import { getCoursesForGame } from '../store/game'
+import { useParams } from 'react-router-dom';
 
 
 function Courses() {
-    const courses = useSelector(state => Object.values(state.courses))
+    const courses = useSelector(state => Object.values(state.games))
     // const gamesArray = Object.values(games)
     const dispatch = useDispatch()
+    const {gameId} = useParams();
 
     useEffect(() => {
-        dispatch(getCourses())
+        dispatch(getCoursesForGame(gameId))
     }, [dispatch]);
 
+    // return (<h1>YAY</h1> )
     return (
         <>
             <div>

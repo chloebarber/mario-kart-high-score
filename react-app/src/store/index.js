@@ -5,7 +5,7 @@ import games from './game'
 
 const rootReducer = combineReducers({
   session,
-  games
+  games //fix this later, courses should be its own reducer
 });
 
 
