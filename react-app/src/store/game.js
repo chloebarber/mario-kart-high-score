@@ -18,7 +18,7 @@ const loadCourses = (courses) => {
 
 const loadCourseInfo = (courseInfo) => {
     return {
-        type: GET_COURSES,
+        type: GET_COURSE_INFO,
         courseInfo,
     }
 }
@@ -80,11 +80,8 @@ export default function games(state = initialState, action) {
         }
 
         case GET_COURSE_INFO: {
-            const courseInfo = {};
-            action.courseInfo.courseInfo.forEach(course => {
-                courseInfo[course.id] = course;
-            });
-            newState = {...courseInfo}
+            newState = Object.assign({}, state);
+            newState.courseInfo = action.courseInfo;
             return newState;
         }
 

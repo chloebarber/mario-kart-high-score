@@ -19,7 +19,7 @@ function Courses() {
         <>
             <div>
                 {courses.map(course => (
-                    <a href={`/games/courses/${course.id}`} id={course.id}>
+                    <a href={`/course/${course.id}`} id={course.id}>
                         <div>
                             <img src={course.splash_img} className='splash-course-image' alt='coursePic' />
                             <div>
