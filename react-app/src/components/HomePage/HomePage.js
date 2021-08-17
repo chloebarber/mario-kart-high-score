@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getGames } from '../store/game'
+import { getGames } from '../../store/game'
 import './HomePage.css';
 
 
