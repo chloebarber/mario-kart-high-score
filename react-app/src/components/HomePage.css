@@ -1,7 +1,7 @@
 .gameListing{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
     gap: 10px;
     justify-items: center;
     align-items: center;
@@ -10,14 +10,15 @@
     background-color: grey;
 }
 .splash-image{
-    width: 100%;
+    width: 300px;
     height: 100%;
     border-radius: 10%;
+    object-fit: cover;
 }
 .game1{
     grid-column: 1;
     grid-row: 1;
-    overflow-y: hidden;
+    height: 300px;
 }
 .game2{
     grid-column: 2;
@@ -26,7 +27,7 @@
 .game3{
     grid-column: 3;
     grid-row: 1;
-    overflow-y: hidden;
+    height: 300px;
 }
 .game4{
     grid-column: 1;
@@ -39,4 +40,5 @@
 .game6{
     grid-column: 3;
     grid-row: 2;
+    height: 300px;
 }
