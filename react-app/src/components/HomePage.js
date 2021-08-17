@@ -15,16 +15,17 @@ function HomePage() {
 
     return (
         <>
+            <h1>Mario Kart Records</h1>
             <div className = "gameListing">
                 {games.map(game => (
-                    <a href={`/games/${game.id}`} id={game.id}>
-                        <div className = {`game${game.id}`}>
+                    <div className = {`game${game.id}`}>
+                        <a href={`/games/${game.id}`} id={game.id}>
                             <img src={game.splash_image} className='splash-image' alt='gamePic' />
                             {/* <div>
                                 <div><h3>{game.game_name}</h3></div>
                             </div> */}
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 ))}
             </div>
         </>

@@ -1,5 +1,19 @@
 body{
-    background-image: url("https://static8.depositphotos.com/1176848/894/i/950/depositphotos_8945283-stock-photo-checkerboard-chess-background.jpg")
+    background-image: url("https://static8.depositphotos.com/1176848/894/i/950/depositphotos_8945283-stock-photo-checkerboard-chess-background.jpg");
+}
+
+h1{
+    font-size: 70px;
+    color: red;
+}
+
+.homePageLayout{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 .gameListing{
@@ -14,6 +28,11 @@ body{
     background-color: grey;
 }
 
+.gameListing > div{
+    height: 400px;
+    width: 100%;
+}
+
 .splash-image{
     width: 100%;
     height: 100%;
@@ -21,43 +40,30 @@ body{
     object-fit: cover;
 }
 
-.game3{
-    grid-column: 3;
-    grid-row: 1;
-    height: 300px;
-    width: 300px;
-}
-
-
 
 
 
 .game1{
     grid-column: 1;
     grid-row: 1;
-    height: 300px;
-    width: 300px;
 }
 .game2{
     grid-column: 2;
     grid-row: 1;
-    height: 300px;
 }
-
+.game3{
+    grid-column: 3;
+    grid-row: 1;
+}
 .game4{
     grid-column: 1;
     grid-row: 2;
-    height: 300px;
-    width: 300px;
 }
 .game5{
     grid-column: 2;
     grid-row: 2;
-    height: 300px;
 }
 .game6{
     grid-column: 3;
     grid-row: 2;
-    height: 300px;
-    width: 300px;
 }
