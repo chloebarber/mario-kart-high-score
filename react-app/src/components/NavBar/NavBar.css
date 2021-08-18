@@ -1,16 +1,25 @@
+a {
+    font-family: arial;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: red;
+}
+
 .nav-bar-container {
-    background: rgb(83,79,77);
-    background: linear-gradient(0deg, rgba(83,79,77,1) 30%, rgba(255,255,255,1) 100%);
-    height: 100px;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
     /* justify-items: center;
     align-items: center; */
-    padding: 10px;
+    padding: 10px 0;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-        "home home . . . . . user signup login"
-        "home home . .  . . . . . logout"
+        "home . . . . user signup login logout"
+        /* "home . . .  . . . . . logout" */
 }
 
 .home-link {
