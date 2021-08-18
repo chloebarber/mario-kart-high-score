@@ -1,45 +1,81 @@
 body{
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
-    justify-self: center;
-    align-self: center;
-    margin: auto;
+    align-items: center;
 }
 
-.CourseViewMain{
-    background-color: blue;
-    width: 85vw;
+.courseViewMain{
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    align-items: center;
     justify-self: center;
-    align-self: center;
+    background-color: blue;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .courseImages{
-    max-height: 500px;
-    display: flex;
     width: 100%;
+    margin-bottom: 5px;
 }
 .splash_image{
-    max-height: 200px;
-    width: 35%;
+    height: 500px;
+    object-fit: fill;
+    width: 34%;
+    box-sizing: border-box;
+    border: 5px solid black;
+    border-radius: 2%;
+    margin-right: 5px;
 }
 
 .map_image{
-    max-height: 200px;
-    width: 65%;
+    height: 500px;
+    object-fit: fill;
+    width: 64%;
+    box-sizing: border-box;
+    border: 5px solid black;
+    border-radius: 2%;
+    margin-left: 5px;
+}
+
+.comment{
+    border: 5px solid black;
+    border-radius: 2%;
+    margin: 5px;
 }
 
 .courseText{
     background-color: green;
+    border: 5px solid black;
+    border-radius: 2%;
+    width: 98%;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
 }
 
-.CommentsAndRecordsContainer{
+.commentsAndRecordsContainer{
+    display: flex;
     background-color: red;
+    width: calc(98% + 10px);
+
+}
+
+.commentsMain{
+    background-color: burlywood;
+    width: 65%;
+    border: 5px solid black;
+    border-radius: 2%;
+    margin-right: 5px;
+}
+.recordsMain{
+    background-color: cyan;
+    width: 35%;
+    border: 5px solid black;
+    border-radius: 2%;
+    margin-left: 5px;
 }
 
 /* .courseInfo-main{

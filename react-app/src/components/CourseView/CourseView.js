@@ -32,15 +32,41 @@ function CourseView() {
         )
     }
 
-    return (
-        <div className = "CourseViewMain">
-            <div>
-                {courseInfo.course && courseDescription()}
+    function timeConversion(time){
+        let minutes = 0;
+        let seconds = 0;
+        let ms = 0;
 
-                <div className = "CommentsAndRecordsContainer">
+        minutes = Math.floor(time/60000)
+        time = time % 60000
+        seconds = Math.floor(time/1000)
+        time = time % 1000
+        ms = time
+
+        if (minutes < 10){
+            minutes = `0${minutes}`
+        }
+        if (seconds < 10){
+            seconds = `0${seconds}`
+        }
+        if (ms < 10){
+            ms = `0${ms}`
+        }
+        else if (ms < 100){
+            ms = `${ms}0`
+        }
+
+        return `${minutes}:${seconds}:${ms}`
+    }
+
+    let rankCounter = 1;
+    return (
+        <div className = "courseViewMain">
+                {courseInfo.course && courseDescription()}
+                <div className = "commentsAndRecordsContainer">
                     <div className = "commentsMain">
                         {courseInfo.comments && courseInfo.comments.map(comment => (
-                            <div>
+                            <div className = "comment">
                                 <div>User: {comment.user_id}</div>
                                 <div>Course: {comment.course_id}</div>
                                 <div>Content: {comment.content}</div>
@@ -48,27 +74,28 @@ function CourseView() {
                         ))}
                     </div>
                     <div className = "recordsMain"> 
-                        {courseInfo.records && courseInfo.records.map(record => (
-                            <div>
-                                <div>User: {record.user_id}</div>
-                                <div>Course: {record.course_id}</div>
-                                <div>Character: {record.character}</div>
-                                <div>Time: {record.time}</div>
-                            </div>
-                        ))}
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>User Id</th>
+                                    <th>Time</th>
+                                    <th>Character</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {courseInfo.records && courseInfo.records.map(record => (
+                                <tr>
+                                    <td>{rankCounter++}</td>
+                                    <td>{record.user_id}</td>
+                                    <td>{timeConversion(record.time)}</td>
+                                    <td>{record.character}</td>
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                {/* {courses.map(course => (
-                    <a href={`/games/courses/${course.id}`} id={course.id}>
-                        <div>
-                            <img src={course.splash_img} className='splash-course-image' alt='coursePic' />
-                            <div>
-                                <div><h3>{course.name}</h3></div>
-                            </div>
-                        </div>
-                    </a>
-                ))} */}
-            </div>
         </div>
 
     )
