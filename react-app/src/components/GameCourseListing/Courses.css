@@ -1,0 +1,53 @@
+.courses-page-div {
+    display: grid;
+    grid-template-columns: 1fr, 3fr, 1fr;
+    grid-template-rows: 1fr;
+}
+
+.game-image-div, .course-description-div {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 10px;
+    background-color: rgb(128,128,128,0.8)
+}
+
+.courses-div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 3em;
+    /* background-color: grey; */
+}
+
+.cup-img {
+    height: 200px;
+    padding: 20px;
+    border-radius: 10%;
+}
+
+.course-text {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+}
+
+.course-link {
+    text-decoration: none;
+}
+
+.splash-course-image {
+    width: 90%;
+    height: 350px;
+    border-radius: 10%;
+}
+
+.cup-div {
+    align-self: center;
+    background-color: rgba(255, 0, 0, 0.9);;
+}
+
+.course-and-image-name {
+    align-content: center;
+}
