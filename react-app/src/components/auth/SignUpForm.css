@@ -86,14 +86,9 @@
     }
 
     .title-sign-up {
-      text-align: center;
-      padding-left: 0px;
       font-size: 25pt;
       line-height: 25pt;
       padding-top: 30px;
     }
 
-    .img-sign-up-mario {
-      display: none;
-    }
 }
