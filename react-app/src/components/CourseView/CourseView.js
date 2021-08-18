@@ -2,10 +2,14 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCourseInfo } from '../../store/courseInfo'
 import { useParams } from 'react-router-dom';
+import AddRecordForm from '.././addRecordForm/index';
 import './CourseView.css'
 
+
 function CourseView() {
-    const courseInfo = useSelector((state) => state.courseInfo)
+    const sessionUser = useSelector(state => state.session.user)
+
+    // const courseInfo = useSelector((state) => state.courseInfo)
     // const comments = useSelector(state => Object.values(state.games.courseInfo.comments))
     // const records = useSelector(state => Object.values(state.games.courseInfo.records))
 
@@ -14,7 +18,20 @@ function CourseView() {
 
     useEffect(() => {
         dispatch(getCourseInfo(courseId))
-    }, [dispatch]);
+    }, [dispatch, courseId]);
+
+    let sessionRecord;
+    if(sessionUser) {
+        sessionRecord = (
+            <AddRecordForm />
+        )
+    } else {
+        sessionRecord = (
+            <>
+                <h2>Must be login to leave a record</h2>
+            </>
+        )
+    }
 
     function courseDescription(){
         return (
@@ -61,6 +78,7 @@ function CourseView() {
 
     let rankCounter = 1;
     return (
+
         <div className = "courseViewMain">
                 {courseInfo.course && courseDescription()}
                 <div className = "commentsAndRecordsContainer">
@@ -75,6 +93,7 @@ function CourseView() {
                     </div>
                     <div className = "recordsMain"> 
                         <h2>Records</h2>
+                        {sessionRecord}
                         <table className = "recordsTable">
                             <thead className = "recordsTable">
                                 <tr className = "recordsTable">

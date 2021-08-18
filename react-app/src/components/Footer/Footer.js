@@ -16,7 +16,7 @@ const Footer = () => {
                 <div className="chloe developer">
                     <h3>Chloe Barber</h3>
                     <a href="https://github.com/chloebarber"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="github icon" className="github-icon"/></a>
-                    <a href=""><img src="https://tinyurl.com/enkdepy6" alt="LinkedIn icon" className="linkedin-icon" /></a>
+                    <a href="google.com"><img src="https://tinyurl.com/enkdepy6" alt="LinkedIn icon" className="linkedin-icon" /></a>
                 </div>
 
                 <div className="antonio developer">
