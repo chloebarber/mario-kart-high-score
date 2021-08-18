@@ -1,0 +1,52 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+}
+
+.CourseViewMain{
+    background-color: blue;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.courseImages{
+    max-height: 500px;
+    display: flex;
+    width: 100%;
+}
+.splash_image{
+    max-height: 200px;
+    width: 35%;
+}
+
+.map_image{
+    max-height: 200px;
+    width: 65%;
+}
+
+.courseText{
+    background-color: green;
+}
+
+.CommentsAndRecordsContainer{
+    background-color: red;
+}
+
+/* .courseInfo-main{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
+    width: 100%;
+} */
