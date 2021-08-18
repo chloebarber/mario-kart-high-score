@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getCourseInfo } from '../../store/courseInfo'
 import { useParams } from 'react-router-dom';
 import {createRecord} from '../../store/record'
+import AddRecordForm from '.././addRecordForm/index';
 
 
 function CourseView() {
@@ -10,7 +11,7 @@ function CourseView() {
     // const courseInfo = useSelector((state) => state.courseInfo)
     // const comments = useSelector(state => Object.values(state.games.courseInfo.comments))
     // const records = useSelector(state => Object.values(state.games.courseInfo.records))
-   
+
     const dispatch = useDispatch()
     const {courseId} = useParams();
 
