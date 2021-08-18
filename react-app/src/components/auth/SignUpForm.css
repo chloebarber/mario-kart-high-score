@@ -15,9 +15,9 @@
 
 .img-sign-up-mario {
     width: 340px;
-    position: relative;
-    top: -280px;
-    left: 300px;
+    position: absolute;
+    top: 130px;
+    right: 100px;
 }
 
 .sign-up-form-container {
