@@ -48,7 +48,7 @@ const SignUpForm = () => {
       <div class="sign-up-banner">
         <h1 class="title-sign-up">Sign up now to track</h1>
         <h1 class="title-sign-up">your high scores!</h1>
-        <img src="https://i.imgur.com/Fa4DmJZ.png" class="img-sign-up-mario"></img>
+        <img src="https://i.imgur.com/Fa4DmJZ.png" class="img-sign-up-mario" alt='baby mario'></img>
       </div>
       <form class="sign-up-form-container" onSubmit={onSignUp}>
         <div class="sign-up-errors">

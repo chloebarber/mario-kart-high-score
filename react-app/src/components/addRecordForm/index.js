@@ -6,11 +6,11 @@ import { createRecord } from '../../store/record'
 const AddRecordForm = () => {
     const sessionUser = useSelector(state => state.session.user)
     const courseInfo = useSelector((state) => state.courseInfo)
-
+    // console.log(courseInfo)
     const dispatch = useDispatch();
 
     const [user_id, setUser_id] = useState(sessionUser.id);
-    const [course_id, setCourse_id] = useState(courseInfo.id);
+    // const [course_id, setCourse_id] = useState(courseInfo.course.id);
     const [time, setTime] = useState();
     const [character, setCharacter] = useState()
     // console.log(+listing)
@@ -25,11 +25,11 @@ const AddRecordForm = () => {
 
         const addRecord = {
            user_id,
-           course_id,
+           course_id:courseInfo.course.id,
            time,
            character
         };
-
+        console.log(addRecord)
         await dispatch(createRecord(addRecord))
 
     };

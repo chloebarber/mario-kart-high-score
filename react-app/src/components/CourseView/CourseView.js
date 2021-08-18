@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCourseInfo } from '../../store/courseInfo'
 import { useParams } from 'react-router-dom';
-import {createRecord} from '../../store/record'
 import AddRecordForm from '.././addRecordForm/index';
 
 
 function CourseView() {
+    const sessionUser = useSelector(state => state.session.user)
 
     // const courseInfo = useSelector((state) => state.courseInfo)
     // const comments = useSelector(state => Object.values(state.games.courseInfo.comments))
@@ -17,12 +17,26 @@ function CourseView() {
 
     useEffect(() => {
         dispatch(getCourseInfo(courseId))
-    }, [dispatch]);
+    }, [dispatch, courseId]);
+
+    let sessionRecord;
+    if(sessionUser) {
+        sessionRecord = (
+            <AddRecordForm />
+        )
+    } else {
+        sessionRecord = (
+            <>
+                <h2>Must be login to leave a record</h2>
+            </>
+        )
+    }
 
     return (
         <>
             <div>
                 <h1>poop</h1>
+                {sessionRecord}
                 {/* {courses.map(course => (
                     <a href={`/games/courses/${course.id}`} id={course.id}>
                         <div>

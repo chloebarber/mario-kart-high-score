@@ -7,16 +7,16 @@ const addRecord = (record) => ({
 })
 
 export const createRecord = record => async (dispatch) => {
-    const response = await fetch(`/api/record`, {
+    const response = await fetch(`/api/record/`, {
         method: "POST",
         headers: {
             "Content-Type": "applicaton/json"
         },
         body: JSON.stringify(record)
     })
-
+    
     if (response.ok) {
-        const newRecord = await response.json()
+        const newRecord = await response
         dispatch(addRecord(newRecord))
     }
     return response
@@ -26,15 +26,15 @@ export const createRecord = record => async (dispatch) => {
 const initialState = {}
 
 export default function records(state = initialState, action) {
-    let updatedState = { ...state }
+    // let updatedState = { ...state }
     let newState;
     switch (action.type) {
         case ADD_RECORD: {
-            // newState = {}
-            // newState[action.record.id] = action.record
-            // return newState;
-            updatedState.current.records[action.record] = action.record
-            return updatedState
+            newState = {}
+            newState[action.record.id] = action.record
+            return newState;
+            // updatedState.current.record[action.record] = action.record
+            // return updatedState
         }
         default:
             return state
