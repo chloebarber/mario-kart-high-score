@@ -65,18 +65,19 @@ function CourseView() {
                 {courseInfo.course && courseDescription()}
                 <div className = "commentsAndRecordsContainer">
                     <div className = "commentsMain">
+                    <h2>Comments</h2>
                         {courseInfo.comments && courseInfo.comments.map(comment => (
                             <div className = "comment">
                                 <div>User: {comment.user_id}</div>
-                                <div>Course: {comment.course_id}</div>
                                 <div>Content: {comment.content}</div>
                             </div>
                         ))}
                     </div>
                     <div className = "recordsMain"> 
-                        <table>
-                            <thead>
-                                <tr>
+                        <h2>Records</h2>
+                        <table className = "recordsTable">
+                            <thead className = "recordsTable">
+                                <tr className = "recordsTable">
                                     <th>Rank</th>
                                     <th>User Id</th>
                                     <th>Time</th>

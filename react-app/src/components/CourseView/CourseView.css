@@ -1,20 +1,37 @@
-body{
+/* body{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .courseViewMain{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
-    background-color: blue;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.courseDescription{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.courseTitle{
+    text-decoration: underline;
+    border: 5px solid black;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 20px;
+    background: red;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .courseImages{
@@ -27,8 +44,9 @@ body{
     width: 34%;
     box-sizing: border-box;
     border: 5px solid black;
-    border-radius: 2%;
+    border-radius: 20px;
     margin-right: 5px;
+    background-color: gray;
 }
 
 .map_image{
@@ -37,20 +55,26 @@ body{
     width: 64%;
     box-sizing: border-box;
     border: 5px solid black;
-    border-radius: 2%;
+    border-radius: 20px;
     margin-left: 5px;
+    background-color: gray
 }
 
 .comment{
     border: 5px solid black;
-    border-radius: 2%;
+    border-radius: 20px;
     margin: 5px;
+    max-width: 60%;
+    box-shadow: 10px 5px 5px black;
+    background: rgb(255,254,223);
+    background: linear-gradient(0deg, rgba(255,254,223,1) 20%, rgba(255,255,178,1) 100%);
 }
 
 .courseText{
-    background-color: green;
+    background: rgb(105,105,105);
+    background: linear-gradient(0deg, rgba(105,105,105,1) 0%, rgba(247,247,247,1) 100%);
     border: 5px solid black;
-    border-radius: 2%;
+    border-radius: 20px;
     width: 98%;
     margin-bottom: 10px;
     padding-bottom: 20px;
@@ -58,31 +82,36 @@ body{
 
 .commentsAndRecordsContainer{
     display: flex;
-    background-color: red;
     width: calc(98% + 10px);
 
 }
 
 .commentsMain{
-    background-color: burlywood;
+    background: rgb(0,97,6);
+    background: linear-gradient(0deg, rgba(0,97,6,1) 20%, rgba(0,168,14,1) 100%);
     width: 65%;
     border: 5px solid black;
-    border-radius: 2%;
+    border-radius: 20px;
     margin-right: 5px;
 }
 .recordsMain{
     background-color: cyan;
     width: 35%;
     border: 5px solid black;
-    border-radius: 2%;
+    border-radius: 20px;
     margin-left: 5px;
 }
-
-/* .courseInfo-main{
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    margin: auto;
+.recordsTable{
     width: 100%;
-} */
+}
+
+th{
+    border-bottom: 5px solid black;
+}
+
+td{
+    border-bottom: 2px solid black;
+    border-left: 0px;
+    border-right: 0px;
+}
+

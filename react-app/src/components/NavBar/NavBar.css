@@ -4,12 +4,13 @@ a {
     color: white;
 }
 
-a:hover {
+/* a:hover {
     color: red;
-}
+} */
 
 .nav-bar-container {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgb(97,0,0);
+    background: linear-gradient(0deg, rgba(97,0,0,1) 0%, rgba(255,0,0,1) 100%);
     height: 100%;
     /* justify-items: center;
     align-items: center; */
