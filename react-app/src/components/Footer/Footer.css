@@ -1,0 +1,135 @@
+h2, h3, p {
+    margin: 0px;
+    color: black;
+}
+
+.footer-div {
+    /* background-color: red; */
+    display: grid;
+    grid: 2em 2em 2em 2em 2em / repeat(6, 1fr);
+    max-height: 150px;
+    background: rgb(83,79,77);
+    background: linear-gradient(0deg, rgba(83,79,77,1) 30%, rgba(255,255,255,1) 100%);
+    margin-top: 15px;
+}
+
+.footer-text {
+    color: black;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+.logo-div {
+    /* background-color: yellow; */
+    margin: 10px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    max-height: inherit;
+}
+
+.logo-img {
+    max-height: 80%;
+}
+
+.contact-us-div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* background-color: purple; */
+}
+
+.contact-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: left;
+}
+
+.repo-text {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.github-icon {
+    height: 40px;
+    margin: 10px;
+}
+
+.linkedin-icon {
+    height: 50px;
+    margin: 5px;
+}
+
+.chloe {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: royalblue; */
+}
+
+.antonio {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: green; */
+}
+
+.ji {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: orange; */
+}
+
+.meagan {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* background-color: pink; */
+}
+
+.developer > h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.github-repo-div {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    /* background-color: whitesmoke; */
+}
+
+.github-repo-div > a {
+    text-decoration: none;
+}
+
+h2 > a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+.acknowledge {
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    /* background-color: whitesmoke; */
+}
+
+.acknowledge-text {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+
+}
+
+.acknowledge-text > a{
+    color: black;
+}
