@@ -9,21 +9,21 @@ function Courses() {
     const courses = useSelector((state) => state.courses)
     // const gamesArray = Object.values(games)
     const dispatch = useDispatch()
-    const {gameId} = useParams();
+    const { gameId } = useParams();
 
     useEffect(() => {
         dispatch(getCoursesForGame(gameId))
-    }, [dispatch]);
+    }, [dispatch, gameId]);
 
 
-    function courseListing(){
-        if (courses.courses){
+    function courseListing() {
+        if (courses.courses) {
             return (
                 <>
                     <div className="courses-page-div">
 
                         <div className="game-image-div">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="test image" />
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="logo holder" />
                             {/* <img src={game.splash_image} alt="game splash image"/> */}
                         </div>
 
@@ -38,15 +38,15 @@ function Courses() {
                             </div>
 
                             <div className="cup-div">
-                                <img src="https://mario.wiki.gallery/images/0/0b/Mario_Kart_8_-_Flower_Cup_logo.svg" alt="flower cup" className="cup-img"/>
+                                <img src="https://mario.wiki.gallery/images/0/0b/Mario_Kart_8_-_Flower_Cup_logo.svg" alt="flower cup" className="cup-img" />
                             </div>
 
                             <div className="cup-div">
-                                <img src="https://mario.wiki.gallery/images/7/7a/MK8_Star_Cup_Alternate_Emblem.svg" alt="star cup" className="cup-img"/>
+                                <img src="https://mario.wiki.gallery/images/7/7a/MK8_Star_Cup_Alternate_Emblem.svg" alt="star cup" className="cup-img" />
                             </div>
 
                             <div className="cup-div">
-                                <img src="https://mario.wiki.gallery/images/4/4b/MK8_Special_Cup_Alternate_Emblem.svg" alt="special cup" className="cup-img"/>
+                                <img src="https://mario.wiki.gallery/images/4/4b/MK8_Special_Cup_Alternate_Emblem.svg" alt="special cup" className="cup-img" />
                             </div>
 
                             {courses.courses.map(course => (
