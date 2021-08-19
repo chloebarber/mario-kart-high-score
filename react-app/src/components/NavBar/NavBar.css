@@ -1,4 +1,4 @@
-a {
+.nav-links a {
     font-family: arial;
     text-decoration: none;
     color: white;
@@ -7,6 +7,12 @@ a {
 /* a:hover {
     color: red;
 } */
+
+.nav-bar-container a {
+    font-family: arial;
+    text-decoration: none;
+    color: white;
+}
 
 .nav-bar-container {
     background: rgb(97,0,0);
@@ -20,10 +26,14 @@ a {
     justify-content: space-between;
 }
 
-.user-rankings-link {
+.all-users-link {
     margin-right: 20px;
 }
 
 .sign-up-link {
+    margin-right: 20px;
+}
+
+.user-profile-link {
     margin-right: 20px;
 }

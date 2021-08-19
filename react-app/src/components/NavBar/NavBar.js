@@ -10,18 +10,22 @@ const NavBar = () => {
   let sessionLinks
   if (sessionUser) {
     sessionLinks = (
-      <>
-        <NavLink to='/users' exact={true} activeClassName='active' className='user-rankings-link'>
-          User Rankings
+      <div className="nav-links">
+        <NavLink to='/users' exact={true} activeClassName='active' className='all-users-link'>
+          All Users
+        </NavLink>
+
+        <NavLink to={`/users/${sessionUser.id}`} exact={true} activeClassName='active' className='user-profile-link'>
+          User Profile
         </NavLink>
 
         <LogoutButton user={sessionUser} className='logout-button' />
 
-      </>
+      </div >
     )
   } else {
     sessionLinks = (
-      <>
+      <div className="nav-links">
         <NavLink to='/sign-up' exact={true} activeClassName='active' className='sign-up-link'>
           Sign Up
         </NavLink>
@@ -30,7 +34,7 @@ const NavBar = () => {
           Login
         </NavLink>
 
-      </>
+      </div>
     )
   }
 
