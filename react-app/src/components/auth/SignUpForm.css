@@ -41,7 +41,7 @@
     border: 2px solid lightgrey;
     border-radius: 5px;
     height: 30px;
-    width: 300px;
+    width: 400px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
@@ -68,6 +68,7 @@
     font-family: arial,sans-serif;
     padding: 20px;
 }
+
 
 @media (max-width: 1028px) {
     .title-sign-up {

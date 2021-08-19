@@ -10,9 +10,9 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(40), nullable=False, unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
     hashed_password = db.Column(db.String(255), nullable=False)
-    character_pfp = db.Column(db.String)
-    bio = db.Column(db.String)
-    country_code = db.Column(db.Integer)
+    character_pfp = db.Column(db.String(1000), nullable=True)
+    bio = db.Column(db.String(500), nullable=True)
+    country_code = db.Column(db.Integer, nullable=True)
 
     records = db.relationship("Record", back_populates="user")
     comments = db.relationship("Comment", back_populates="user")
@@ -33,7 +33,7 @@ class User(db.Model, UserMixin):
             'id': self.id,
             'username': self.username,
             'email': self.email,
-            # 'character_pfp': self.character_pfp,
-            # 'bio': self.bio,
+            'character_pfp': self.character_pfp,
+            'bio': self.bio,
             # 'country_code': self.country_code
         }
