@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCourseInfo } from '../../store/courseInfo'
+import { getCourseInfo, createComment, deleteComment } from '../../store/courseInfo'
 import { useParams } from 'react-router-dom';
 import AddRecordForm from '.././addRecordForm/index';
 import AddCommentForm from '.././addCommentForm/index';
+// import { deleteComment } from '../../store/comment';
+import { deleteRecord } from '../../store/record';
 import './CourseView.css'
 
 
@@ -22,17 +24,65 @@ function CourseView() {
     }, [dispatch, courseId]);
 
     let sessionRecord;
+    let sessionComment;
+    let editComment;
+
+    function handleDeleteComment(e, commentIdToDelete){
+        e.preventDefault();
+        return dispatch(deleteComment(commentIdToDelete))
+          .catch(async (res) => {
+            const data = await res.json();
+          });
+    }
+
+    function handleDeleteRecord(e, recordIdToDelete){
+        e.preventDefault();
+        return dispatch(deleteRecord(recordIdToDelete))
+          .catch(async (res) => {
+            const data = await res.json();
+          });
+    }
+
+    function userCommentOptions(sessionUser, comment){
+        if (sessionUser && (sessionUser.id === comment.user_id)){
+            return (
+                <>
+                <button>Edit</button> 
+                <button onClick={(e) => handleDeleteComment(e, comment.id)}>Delete</button> 
+                </>
+            )
+        }      
+    }
+    function userRecordOptions(sessionUser, record){
+        if (sessionUser && (sessionUser.id === record.user_id)){
+            return (
+                <td>
+                <button onClick={(e) => handleDeleteRecord(e, record.id)}>Remove Record</button> 
+                </td>
+            )
+        }      
+    }
+    
+
+
     if(sessionUser) {
         sessionRecord = (
             <>
                 <AddRecordForm />
-                <AddCommentForm />
             </>
+        )
+        sessionComment = (
+            <AddCommentForm />
         )
     } else {
         sessionRecord = (
             <>
-                <h2>Must be logged in to leave a record</h2>
+                <h2>Log in to post a new record</h2>
+            </>
+        )
+        sessionComment = (
+            <>
+                <h2>Log in to leave a comment</h2>
             </>
         )
     }
@@ -88,10 +138,12 @@ function CourseView() {
                 <div className = "commentsAndRecordsContainer">
                     <div className = "commentsMain">
                     <h2>Comments</h2>
+                    {sessionComment}
                         {courseInfo.comments && courseInfo.comments.map(comment => (
                             <div className = "comment">
                                 <div>User: {comment.user_id}</div>
                                 <div>Content: {comment.content}</div>
+                                {userCommentOptions(sessionUser, comment)}
                             </div>
                         ))}
                     </div>
@@ -114,6 +166,7 @@ function CourseView() {
                                     <td>{record.user_id}</td>
                                     <td>{timeConversion(record.time)}</td>
                                     <td>{record.character}</td>
+                                    {userRecordOptions(sessionUser, record)}
                                 </tr>
                             ))}
                             </tbody>

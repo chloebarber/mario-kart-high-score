@@ -21,6 +21,16 @@ export const createComment = comment => async (dispatch) => {
     return response
 }
 
+export const deleteComment = id => async (dispatch) => {
+    const response = await fetch(`/api/comment/${id}`, {
+        method: "DELETE",
+    })
+    if (response.ok) {
+        const newComment = await response
+        // dispatch(addComment(newComment))
+    }
+    return response
+}
 
 const initialState = {}
 
@@ -30,7 +40,8 @@ export default function comments(state = initialState, action) {
     switch (action.type) {
         case ADD_COMMENT: {
             newState = {}
-            newState[action.comment.id] = action.comment
+            console.log(action.comment);
+            newState.comments[action.comment.id] = action.comment
             return newState;
         }
         default:
