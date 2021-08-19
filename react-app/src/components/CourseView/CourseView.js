@@ -91,7 +91,7 @@ function CourseView() {
                             </div>
                         ))}
                     </div>
-                    <div className = "recordsMain"> 
+                    <div className = "recordsMain">
                         <h2>Records</h2>
                         {sessionRecord}
                         <table className = "recordsTable">
