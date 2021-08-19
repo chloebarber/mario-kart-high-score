@@ -9,7 +9,7 @@ import './CourseView.css'
 function CourseView() {
     const sessionUser = useSelector(state => state.session.user)
 
-    // const courseInfo = useSelector((state) => state.courseInfo)
+    const courseInfo = useSelector((state) => state.courseInfo)
     // const comments = useSelector(state => Object.values(state.games.courseInfo.comments))
     // const records = useSelector(state => Object.values(state.games.courseInfo.records))
 
