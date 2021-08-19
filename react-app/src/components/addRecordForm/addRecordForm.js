@@ -35,13 +35,16 @@ const AddRecordForm = () => {
     return (
         <div className='record-div'>
             <form className='record-form' onSubmit={handleSubmit}>
-                <label className="time">Enter your time:
-                    <input type="integer" onChange={createTime}/>
-                </label>
-
-                <label className="character">Enter your character:
-                    <input type="text" onChange={createCharacter}/>
-                </label>
+                <div>
+                    <label className="time">Enter your time:
+                        <input type="integer" onChange={createTime}/>
+                    </label>
+                </div>
+                <div>
+                    <label className="character">Enter your character:
+                        <input type="text" onChange={createCharacter}/>
+                    </label>
+                </div>
 
                 <button className='recordSubmit__button' type='submit'>Submit</button>
             </form>
