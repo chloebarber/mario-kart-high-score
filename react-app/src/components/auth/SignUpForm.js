@@ -10,7 +10,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
-  const [character_pfp, setCharacter_pfp] = useState('');
+  const [character_pfp, setCharacter_pfp] = useState('https://mariokart8.nintendo.com/assets/img/drivers/mario_th.png');
   const [bio, setBio] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
@@ -115,13 +115,38 @@ const SignUpForm = () => {
           ></input>
         </div>
         <div className="character-select-container">
-          <div className="pfp-select toad-pfp">
+          <div className="pfp-select mario-pfp">
             <label>
-              <img src="https://pbs.twimg.com/media/DPv03idXUAAE7nI.png" width="75" />
+              <img src="https://mariokart8.nintendo.com/assets/img/drivers/mario_th.png" />
               <input
+                name="character-select"
                 type="radio"
-                value="https://pbs.twimg.com/media/DPv03idXUAAE7nI.png"
-                checked={character_pfp}
+                defaultChecked
+                value="https://mariokart8.nintendo.com/assets/img/drivers/mario_th.png"
+                onChange={updateCharacter_pfp}
+              />
+            </label>
+          </div>
+          <div className="pfp-select luigi-pfp">
+            <label>
+              <img src="https://mariokart8.nintendo.com/assets/img/drivers/luigi_th.png" />
+              <input
+                name="character-select"
+                type="radio"
+                value="https://mariokart8.nintendo.com/assets/img/drivers/luigi_th.png"
+                // checked={character_pfp}
+                onChange={updateCharacter_pfp}
+              />
+            </label>
+          </div>
+          <div className="pfp-select yoshi-pfp">
+            <label>
+              <img src="https://mariokart8.nintendo.com/assets/img/drivers/yoshi_th.png" />
+              <input
+                name="character-select"
+                type="radio"
+                value="https://mariokart8.nintendo.com/assets/img/drivers/yoshi_th.png"
+                // checked={character_pfp}
                 onChange={updateCharacter_pfp}
               />
             </label>

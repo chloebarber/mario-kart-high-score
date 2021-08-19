@@ -14,14 +14,14 @@ function CourseView() {
     // const records = useSelector(state => Object.values(state.games.courseInfo.records))
 
     const dispatch = useDispatch()
-    const {courseId} = useParams();
+    const { courseId } = useParams();
 
     useEffect(() => {
         dispatch(getCourseInfo(courseId))
     }, [dispatch, courseId]);
 
     let sessionRecord;
-    if(sessionUser) {
+    if (sessionUser) {
         sessionRecord = (
             <AddRecordForm />
         )
@@ -33,43 +33,43 @@ function CourseView() {
         )
     }
 
-    function courseDescription(){
+    function courseDescription() {
         return (
             <>
-                <div className = "courseImages">
+                <div className="courseImages">
                     <img src={courseInfo.course.splash_img} className='splash_image' alt='coursePic' />
                     <img src={courseInfo.course.map_img} className='map_image' alt='mapPic' />
                 </div>
-                <div className = "courseText">
-                    <h1 className = "courseTitle">{courseInfo.course.name}</h1>
-                    <p/>
-                    <div className = "courseDescription">{courseInfo.course.description}</div>
+                <div className="courseText">
+                    <h1 className="courseTitle">{courseInfo.course.name}</h1>
+                    <p />
+                    <div className="courseDescription">{courseInfo.course.description}</div>
                 </div>
             </>
         )
     }
 
-    function timeConversion(time){
+    function timeConversion(time) {
         let minutes = 0;
         let seconds = 0;
         let ms = 0;
 
-        minutes = Math.floor(time/60000)
+        minutes = Math.floor(time / 60000)
         time = time % 60000
-        seconds = Math.floor(time/1000)
+        seconds = Math.floor(time / 1000)
         time = time % 1000
         ms = time
 
-        if (minutes < 10){
+        if (minutes < 10) {
             minutes = `0${minutes}`
         }
-        if (seconds < 10){
+        if (seconds < 10) {
             seconds = `0${seconds}`
         }
-        if (ms < 10){
+        if (ms < 10) {
             ms = `0${ms}`
         }
-        else if (ms < 100){
+        else if (ms < 100) {
             ms = `${ms}0`
         }
 
@@ -79,31 +79,31 @@ function CourseView() {
     let rankCounter = 1;
     return (
 
-        <div className = "courseViewMain">
-                {courseInfo.course && courseDescription()}
-                <div className = "commentsAndRecordsContainer">
-                    <div className = "commentsMain">
+        <div className="courseViewMain">
+            {courseInfo.course && courseDescription()}
+            <div className="commentsAndRecordsContainer">
+                <div className="commentsMain">
                     <h2>Comments</h2>
-                        {courseInfo.comments && courseInfo.comments.map(comment => (
-                            <div className = "comment">
-                                <div>User: {comment.user_id}</div>
-                                <div>Content: {comment.content}</div>
-                            </div>
-                        ))}
-                    </div>
-                    <div className = "recordsMain"> 
-                        <h2>Records</h2>
-                        {sessionRecord}
-                        <table className = "recordsTable">
-                            <thead className = "recordsTable">
-                                <tr className = "recordsTable">
-                                    <th>Rank</th>
-                                    <th>User Id</th>
-                                    <th>Time</th>
-                                    <th>Character</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                    {courseInfo.comments && courseInfo.comments.map(comment => (
+                        <div className="comment-div">
+                            <div>User: {comment.user_id}</div>
+                            <div>Content: {comment.content}</div>
+                        </div>
+                    ))}
+                </div>
+                <div className="recordsMain">
+                    <h2>Records</h2>
+                    {sessionRecord}
+                    <table className="recordsTable">
+                        <thead className="recordsTable">
+                            <tr className="recordsTable">
+                                <th>Rank</th>
+                                <th>User Id</th>
+                                <th>Time</th>
+                                <th>Character</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                             {courseInfo.records && courseInfo.records.map(record => (
                                 <tr>
                                     <td>{rankCounter++}</td>
@@ -112,10 +112,10 @@ function CourseView() {
                                     <td>{record.character}</td>
                                 </tr>
                             ))}
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
         </div>
 
     )

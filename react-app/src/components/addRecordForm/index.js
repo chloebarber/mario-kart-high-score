@@ -9,7 +9,7 @@ const AddRecordForm = () => {
     // console.log(courseInfo)
     const dispatch = useDispatch();
 
-    const [user_id, setUser_id] = useState(sessionUser.id);
+    const userId = sessionUser.id
     // const [course_id, setCourse_id] = useState(courseInfo.course.id);
     const [time, setTime] = useState();
     const [character, setCharacter] = useState()
@@ -24,9 +24,9 @@ const AddRecordForm = () => {
         e.preventDefault();
 
         const addRecord = {
-           user_id,
-           course_id:courseInfo.course.id,
-           time,
+           user_id: userId,
+           course_id: courseInfo.course.id,
+           time: +time,
            character
         };
         console.log(addRecord)
@@ -37,13 +37,16 @@ const AddRecordForm = () => {
     return (
         <div className='record-div'>
             <form className='record-form' onSubmit={handleSubmit}>
-                <label className="time">Enter your time:
-                    <input type="integer" onChange={createTime}/>
-                </label>
-
-                <label className="character">Enter your character:
-                    <input type="text" onChange={createCharacter}/>
-                </label>
+                <div>
+                    <label className="time">Enter your time:
+                        <input type="integer" onChange={createTime}/>
+                    </label>
+                </div>
+                <div>
+                    <label className="character">Enter your character:
+                        <input type="text" onChange={createCharacter}/>
+                    </label>
+                </div>
 
                 <button className='recordSubmit__button' type='submit'>Submit</button>
             </form>

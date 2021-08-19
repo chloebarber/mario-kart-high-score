@@ -1,0 +1,22 @@
+.user-container a {
+    color: black;
+}
+
+.user-container {
+    background-color: white;
+}
+
+.user-profile-div {
+    border: 1px solid black;
+
+}
+
+.user-record-div {
+    border: 1px solid black;
+
+}
+
+.user-comment-div {
+    border: 1px solid black;
+
+}
