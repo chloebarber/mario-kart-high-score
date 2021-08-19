@@ -4,14 +4,16 @@ import session from './session'
 import games from './game'
 import courses from './courses'
 import courseInfo from './courseInfo'
-import records from './record'
+// import records from './record'
+// import comments from './comment';
 
 const rootReducer = combineReducers({
   session,
   games,
   courses,
   courseInfo,
-  records
+  // records,
+  // comments,
 });
 
 

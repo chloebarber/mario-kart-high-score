@@ -10,17 +10,28 @@ export const createRecord = record => async (dispatch) => {
     const response = await fetch(`/api/record/`, {
         method: "POST",
         headers: {
-            "Content-Type": "applicaton/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(record)
     })
-
     if (response.ok) {
-        const newRecord = await response.json()
+        console.log(response.json())
+        const newRecord = await response
         dispatch(addRecord(newRecord))
 
     }
 
+}
+
+export const deleteRecord = id => async (dispatch) => {
+    const response = await fetch(`/api/record/${id}`, {
+        method: "DELETE",
+    })
+    if (response.ok) {
+        const newRecord = await response
+        // dispatch(addComment(newComment))
+    }
+    return response
 }
 
 
