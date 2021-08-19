@@ -46,4 +46,4 @@ def deleteRecord(id):
     db.session.delete(record)
     db.session.commit()
 
-    return {'success': 'baleeted it 4 u boss'}
+    return record.to_dict()

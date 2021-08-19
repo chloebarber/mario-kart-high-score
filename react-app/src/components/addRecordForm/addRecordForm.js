@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { createRecord } from '../../store/record'
+import { createRecordThunk } from '../../store/courseInfo'
 // import './AddReviewForm.css';
 
 const AddRecordForm = () => {
@@ -28,8 +28,7 @@ const AddRecordForm = () => {
            time: +time,
            character
         };
-        console.log(addRecord)
-        await dispatch(createRecord(addRecord))
+        await dispatch(createRecordThunk(addRecord))
 
     };
 

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCourseInfo, createComment, deleteComment } from '../../store/courseInfo'
+import { getCourseInfo, deleteCommentThunk, deleteRecordThunk } from '../../store/courseInfo'
 import { useParams } from 'react-router-dom';
-import AddRecordForm from '.././addRecordForm/index';
-import AddCommentForm from '.././addCommentForm/index';
+import AddRecordForm from '../addRecordForm/addRecordForm';
+import AddCommentForm from '../addCommentForm/addCommentForm';
+import EditCommentForm from '../editCommentForm/editCommentForm';
 // import { deleteComment } from '../../store/comment';
-import { deleteRecord } from '../../store/record';
+// import { deleteRecord } from '../../store/record';
 import './CourseView.css'
 
 
@@ -27,9 +28,17 @@ function CourseView() {
     let sessionComment;
     let editComment;
 
+    function handleEditComment(e, commentIdToDelete){
+        e.preventDefault();
+        return dispatch(deleteCommentThunk(commentIdToDelete))
+          .catch(async (res) => {
+            const data = await res.json();
+          });
+    }
+
     function handleDeleteComment(e, commentIdToDelete){
         e.preventDefault();
-        return dispatch(deleteComment(commentIdToDelete))
+        return dispatch(deleteCommentThunk(commentIdToDelete))
           .catch(async (res) => {
             const data = await res.json();
           });
@@ -37,7 +46,7 @@ function CourseView() {
 
     function handleDeleteRecord(e, recordIdToDelete){
         e.preventDefault();
-        return dispatch(deleteRecord(recordIdToDelete))
+        return dispatch(deleteRecordThunk(recordIdToDelete))
           .catch(async (res) => {
             const data = await res.json();
           });
@@ -47,7 +56,7 @@ function CourseView() {
         if (sessionUser && (sessionUser.id === comment.user_id)){
             return (
                 <>
-                <button>Edit</button> 
+                <EditCommentForm comment={comment}/>
                 <button onClick={(e) => handleDeleteComment(e, comment.id)}>Delete</button> 
                 </>
             )
