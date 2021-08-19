@@ -10,7 +10,7 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
-  const [character_pfp, setCharacter_pfp] = useState('');
+  const [character_pfp, setCharacter_pfp] = useState('https://mariokart8.nintendo.com/assets/img/drivers/mario_th.png');
   const [bio, setBio] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
@@ -121,6 +121,7 @@ const SignUpForm = () => {
               <input
                 name="character-select"
                 type="radio"
+                defaultChecked
                 value="https://mariokart8.nintendo.com/assets/img/drivers/mario_th.png"
                 onChange={updateCharacter_pfp}
               />
