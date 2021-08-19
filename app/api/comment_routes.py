@@ -7,7 +7,7 @@ comment_route = Blueprint('comment', __name__)
 
 @comment_route.route('/', methods=['POST'])
 def postComment():
-    form = CommentForm(request.form)
+    form = CommentForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         data = form.data

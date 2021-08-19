@@ -10,12 +10,12 @@ export const createRecord = record => async (dispatch) => {
     const response = await fetch(`/api/record/`, {
         method: "POST",
         headers: {
-            "Content-Type": "applicaton/json"
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(record)
     })
-    
     if (response.ok) {
+        console.log(response.json())
         const newRecord = await response
         dispatch(addRecord(newRecord))
     }

@@ -9,7 +9,6 @@ const AddRecordForm = () => {
     // console.log(courseInfo)
     const dispatch = useDispatch();
 
-    const [user_id, setUser_id] = useState(sessionUser.id);
     // const [course_id, setCourse_id] = useState(courseInfo.course.id);
     const [time, setTime] = useState();
     const [character, setCharacter] = useState()
@@ -24,9 +23,9 @@ const AddRecordForm = () => {
         e.preventDefault();
 
         const addRecord = {
-           user_id,
+           user_id: sessionUser.id,
            course_id:courseInfo.course.id,
-           time,
+           time: +time,
            character
         };
         console.log(addRecord)

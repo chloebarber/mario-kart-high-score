@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getCourseInfo } from '../../store/courseInfo'
 import { useParams } from 'react-router-dom';
 import AddRecordForm from '.././addRecordForm/index';
+import AddCommentForm from '.././addCommentForm/index';
 import './CourseView.css'
 
 
@@ -23,12 +24,15 @@ function CourseView() {
     let sessionRecord;
     if(sessionUser) {
         sessionRecord = (
-            <AddRecordForm />
+            <>
+                <AddRecordForm />
+                <AddCommentForm />
+            </>
         )
     } else {
         sessionRecord = (
             <>
-                <h2>Must be login to leave a record</h2>
+                <h2>Must be logged in to leave a record</h2>
             </>
         )
     }
