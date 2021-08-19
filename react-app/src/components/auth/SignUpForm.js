@@ -10,13 +10,15 @@ const SignUpForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
+  const [character_pfp, setCharacter_pfp] = useState('');
+  const [bio, setBio] = useState('');
   const user = useSelector(state => state.session.user);
   const dispatch = useDispatch();
 
   const onSignUp = async (e) => {
     e.preventDefault();
     if (password === repeatPassword) {
-      const data = await dispatch(signUp(username, email, password));
+      const data = await dispatch(signUp(username, email, password, character_pfp, bio));
       if (data) {
         setErrors(data)
       }
@@ -38,6 +40,14 @@ const SignUpForm = () => {
   const updateRepeatPassword = (e) => {
     setRepeatPassword(e.target.value);
   };
+
+  const updateCharacter_pfp = (e) => {
+    setCharacter_pfp(e.target.value);
+  };
+
+  const updateBio = (e) => {
+    setBio(e.target.value);
+  }
 
   if (user) {
     return <Redirect to='/' />;
@@ -92,6 +102,30 @@ const SignUpForm = () => {
             value={repeatPassword}
             required={true}
           ></input>
+        </div>
+        <div>
+          <label>Bio</label>
+          <input
+            id="bio-input-box"
+            type='text'
+            name='bio'
+            onChange={updateBio}
+            value={bio}
+            required={false}
+          ></input>
+        </div>
+        <div className="character-select-container">
+          <div className="pfp-select toad-pfp">
+            <label>
+              <img src="https://pbs.twimg.com/media/DPv03idXUAAE7nI.png" width="75" />
+              <input
+                type="radio"
+                value="https://pbs.twimg.com/media/DPv03idXUAAE7nI.png"
+                checked={character_pfp}
+                onChange={updateCharacter_pfp}
+              />
+            </label>
+          </div>
         </div>
         <button class="sign-up-button" type='submit'>Sign Up</button>
       </form>
