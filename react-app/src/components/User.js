@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 
 function User() {
   const [user, setUser] = useState({});
-  const { userId }  = useParams();
+  const { userId } = useParams();
 
   useEffect(() => {
     if (!userId) {
@@ -30,6 +30,12 @@ function User() {
       </li>
       <li>
         <strong>Email</strong> {user.email}
+      </li>
+      <li>
+        <strong>Character</strong> {user.character_pfp}
+      </li>
+      <li>
+        <strong>bio</strong> {user.bio}
       </li>
     </ul>
   );
