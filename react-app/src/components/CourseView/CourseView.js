@@ -149,7 +149,7 @@ function CourseView() {
                     <h2>Comments</h2>
                     {sessionComment}
                         {courseInfo.comments && courseInfo.comments.map(comment => (
-                            <div className = "comment">
+                            <div className = "comment-div">
                                 <div>User: {comment.user_id}</div>
                                 <div>Content: {comment.content}</div>
                                 {userCommentOptions(sessionUser, comment)}
