@@ -8,14 +8,15 @@
 
 .user-profile-div {
     border: 1px solid black;
-}
 
-.user-comment-div {
-    border: 1px solid black;
-    display: inline-block;
 }
 
 .user-record-div {
     border: 1px solid black;
-    display: inline-block;
+
+}
+
+.user-comment-div {
+    border: 1px solid black;
+
 }

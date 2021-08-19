@@ -54,12 +54,22 @@ function User() {
   return (
     <div className="user-container">
       <div className="user-profile-div">
-        <h2>User Profile</h2>
-        <div><strong>User Id</strong> {userId}</div>
+        <h2>Profile</h2>
+        <img src={user.user?.character_pfp} />
+        <div><strong>ID:</strong> {userId}</div>
         <div><strong>Username</strong> {user.user?.username}</div>
-        <div><strong>Email</strong> {user.user?.email}</div>
-        <div><strong>Character</strong> {user.user?.character_pfp}</div>
-        <div><strong>bio</strong> {user.user?.bio}</div>
+        {/* <div><strong>Email</strong> {user.user?.email}</div> */}
+        {/* <div><strong>Character</strong> {user.user?.character_pfp}</div> */}
+        <div><strong>Bio</strong> {user.user?.bio}</div>
+      </div>
+
+      <div className="user-record-div">
+        <h2>User records</h2>
+        {user.record && user.record.map(record => (
+          <div className="record">
+            {timeConversion(record?.time)} {record?.character} <a href={`/course/${record?.course_id}`}>View Course</a>
+          </div>
+        ))}
       </div>
 
       <div className="user-comment-div">
@@ -71,14 +81,6 @@ function User() {
         ))}
       </div>
 
-      <div className="user-record-div">
-        <h2>User records</h2>
-        {user.record && user.record.map(record => (
-          <div className="record">
-            {timeConversion(record?.time)} <a href={`/course/${record?.course_id}`}>View Course</a>
-          </div>
-        ))}
-      </div>
 
     </div >
   );
