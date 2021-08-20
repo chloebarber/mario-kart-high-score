@@ -1,3 +1,4 @@
+from operator import contains
 from flask import Blueprint, jsonify, session, request
 from app.models import User, db
 from app.forms import LoginForm
@@ -43,7 +44,6 @@ def login():
         login_user(user)
         return user.to_dict()
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
-
 
 @auth_routes.route('/logout')
 def logout():
