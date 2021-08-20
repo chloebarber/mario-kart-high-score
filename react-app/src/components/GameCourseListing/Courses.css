@@ -50,14 +50,15 @@
 
 .splash-game-image {
     max-height: 350px;
+    width: 100%;
     box-sizing: border-box;
     border-radius: 10%;
 }
 
 .cup-img {
     height: 200px;
-    padding: 20px;
-    border-radius: 10%;
+    padding: 38px;
+    /* border-radius: 10%; */
 }
 
 .course-text {
@@ -84,7 +85,7 @@
 
 .splash-course-image {
     width: 90%;
-    height: 50%;
+    height: 250px;
     border-radius: 10%;
     margin-bottom: 10px;
 }
@@ -102,4 +103,5 @@
     align-content: center;
     justify-content: center;
     box-sizing: border-box;
+    border-right: black 2px;
 }
