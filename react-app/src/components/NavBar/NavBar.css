@@ -1,13 +1,12 @@
 .nav-links a {
     font-family: 'New Super Mario Font U', sans-serif;
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .nav-bar-container a {
-
     text-decoration: none;
-    color: white;
+    /* color: white; */
 }
 
 .nav-bar-container {
@@ -89,4 +88,14 @@
     position: absolute;
     right: 2%;
     bottom: 50%;
+}
+
+.logged-out-div {
+    position: relative;
+    background-color: purple;
+}
+
+.demo-button {
+    position: absolute;
+    text-align: start;
 }

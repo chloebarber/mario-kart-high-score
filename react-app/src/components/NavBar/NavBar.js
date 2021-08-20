@@ -33,19 +33,20 @@ const NavBar = () => {
     )
   } else {
     sessionLinks = (
-      <div className="nav-links">
-        <NavLink to='/sign-up' exact={true} activeClassName='active' className='sign-up-link'>
-          Sign Up
-        </NavLink>
+      <div className='logged-out-div'>
+        <div className="nav-links">
+          <NavLink to='/sign-up' exact={true} activeClassName='active' className='sign-up-link'>
+            Sign Up
+          </NavLink>
 
-        <NavLink to='/login' exact={true} activeClassName='active' className="login-link">
-          Login
-        </NavLink>
+          <NavLink to='/login' exact={true} activeClassName='active' className="login-link">
+            Login
+          </NavLink>
 
-        <div className='demo-div'>
-          <button className="demo-button" onClick={demoUserLogin}>Demo</button>
+          <div className='demo-div'>
+            <button className="demo-button" onClick={demoUserLogin}>Demo</button>
+          </div>
         </div>
-
       </div>
     )
   }
