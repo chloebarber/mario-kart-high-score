@@ -22,7 +22,7 @@ def postRecord():
     # return {'request': request.form}
 
 
-@record_route.route('/<int:id>', methods=['PUT'])
+@record_route.route('/<int:id>/', methods=['PUT'])
 def editRecord(id):
     form = RecordForm(request.form)
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -39,7 +39,7 @@ def editRecord(id):
     return {'error': 'UH OH ERROR'}
 
 
-@record_route.route('/<int:id>', methods=['DELETE'])
+@record_route.route('/<int:id>/', methods=['DELETE'])
 def deleteRecord(id):
 
     record = Record.query.get(id)

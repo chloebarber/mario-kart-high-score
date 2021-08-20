@@ -8,7 +8,7 @@ const loadCourses = (courses) => {
 }
 
 export const getCoursesForGame = (gameId) => async (dispatch) => {
-    const response = await fetch(`/api/game/${gameId}`)
+    const response = await fetch(`/api/game/${gameId}/`)
 
     if (response.ok) {
         const courses = await response.json()

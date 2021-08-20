@@ -22,7 +22,7 @@ export const createComment = comment => async (dispatch) => {
 }
 
 export const deleteComment = id => async (dispatch) => {
-    const response = await fetch(`/api/comment/${id}`, {
+    const response = await fetch(`/api/comment/${id}/`, {
         method: "DELETE",
     })
     if (response.ok) {

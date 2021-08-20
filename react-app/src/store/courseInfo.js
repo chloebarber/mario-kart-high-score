@@ -56,7 +56,7 @@ export const createRecordThunk = record => async (dispatch) => {
 }
 
 export const deleteRecordThunk = id => async (dispatch) => {
-    const response = await fetch(`/api/record/${id}`, {
+    const response = await fetch(`/api/record/${id}/`, {
         method: "DELETE",
     })
     if (response.ok) {
@@ -82,7 +82,7 @@ export const createCommentThunk = comment => async (dispatch) => {
 }
 
 export const editCommentThunk = comment => async (dispatch) => {
-    const response = await fetch(`/api/comment/${comment.id}`, {
+    const response = await fetch(`/api/comment/${comment.id}/`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -97,7 +97,7 @@ export const editCommentThunk = comment => async (dispatch) => {
 }
 
 export const deleteCommentThunk = id => async (dispatch) => {
-    const response = await fetch(`/api/comment/${id}`, {
+    const response = await fetch(`/api/comment/${id}/`, {
         method: "DELETE",
     })
     if (response.ok) {
@@ -110,7 +110,7 @@ export const deleteCommentThunk = id => async (dispatch) => {
 
 //-----------COURSE THUNKS---------------
 export const getCourseInfo = (courseId) => async (dispatch) => {
-    const response = await fetch(`/api/course/${courseId}`)
+    const response = await fetch(`/api/course/${courseId}/`)
 
     if (response.ok) {
         const courseInfo = await response.json()

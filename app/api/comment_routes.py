@@ -20,7 +20,7 @@ def postComment():
     return {'error': 'UH OH ERROR'}
 
 
-@comment_route.route('/<int:id>', methods=['PUT'])
+@comment_route.route('/<int:id>/', methods=['PUT'])
 def editComment(id):
     form = CommentForm()
     form['csrf_token'].data = request.cookies['csrf_token']
@@ -36,7 +36,7 @@ def editComment(id):
     return {'error': 'UH OH ERROR'}
 
 
-@comment_route.route('/<int:id>', methods=['DELETE'])
+@comment_route.route('/<int:id>/', methods=['DELETE'])
 def deleteComment(id):
 
     comment = Comment.query.get(id)

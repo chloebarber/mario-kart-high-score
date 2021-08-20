@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { createCommentThunk } from '../../store/courseInfo'
 // import { useParams } from 'react-router-dom';
-// import './AddReviewForm.css';
+import './AddCommentForm.css';
 
 const AddCommentForm = () => {
     const sessionUser = useSelector(state => state.session.user)
@@ -11,7 +11,7 @@ const AddCommentForm = () => {
     const dispatch = useDispatch();
 
     // const [course_id, setCourse_id] = useState(courseInfo.course.id);
-    const [content, setContent] = useState();
+    const [content, setContent] = useState("");
     // console.log(+listing)
 
     // const createUserId = (e) => setUser_id(e.target.value);
@@ -19,6 +19,7 @@ const AddCommentForm = () => {
     const createContent = (e) => setContent(e.target.value);
 
     const handleSubmit = async (e) => {
+        
         e.preventDefault();
 
         const addComment = {
@@ -33,8 +34,8 @@ const AddCommentForm = () => {
     return (
         <div className='comment-form-div'>
             <form className='comment-form' onSubmit={handleSubmit}>
-                <label className="content">How does this course make you feel?
-                    <input type="text" onChange={createContent}/>
+                <label className="content">
+                    <input type="text" onChange={createContent} placeholder="What do you think about the course?"/>
                 </label>
 
                 <button className='commentSubmit__button' type='submit'>Submit</button>
