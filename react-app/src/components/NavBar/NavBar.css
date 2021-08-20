@@ -2,7 +2,12 @@
     font-family: 'New Super Mario Font U', sans-serif;
     text-decoration: none;
     color: black;
+    font-size: 25px;
 }
+
+/* .nav-links button {
+    color: purple;
+} */
 
 .nav-bar-container a {
     text-decoration: none;
@@ -45,6 +50,7 @@
     border: 1px solid black;
     padding: 3px 10px 3px 10px;
     transition: .3s ease;
+    font-family: 'New Super Mario Font U', sans-serif;
 }
 
 .logout-button-official:hover, .demo-button:hover {

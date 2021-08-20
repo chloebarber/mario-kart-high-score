@@ -20,11 +20,11 @@ const NavBar = () => {
     sessionLinks = (
       <div className="nav-links">
         <NavLink to='/users' exact={true} activeClassName='active' className='all-users-link'>
-          <h3 className="racers-text">MK Racers!</h3>
+          MK Racers!
         </NavLink>
 
         <NavLink to={`/users/${sessionUser.id}`} exact={true} activeClassName='active' className='user-profile-link'>
-          <h3 className="profile-text">Profile</h3>
+          My Profile
         </NavLink>
 
         <LogoutButton user={sessionUser} className='logout-button' />
