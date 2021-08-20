@@ -24,13 +24,14 @@ function Courses() {
             return (
                 <>
                     <div className="courses-page-div">
+                        <div className="course-header">
+                            <div className="game-image-div">
+                                <img src={courses?.game.splash_image} className='splash-game-image' alt='gamePic' />
+                            </div>
 
-                        <div className="game-image-div">
-                            <img src={courses?.game.splash_image} className='splash-game-image' alt='gamePic' />
-                        </div>
-
-                        <div className="course-description-div">
-                            <p>{ courses?.game.description }</p>
+                            <div className="course-description-div">
+                                <p className="course-description-text">{ courses?.game.description }</p>
+                            </div>
                         </div>
 
                         <div className="courses-div">

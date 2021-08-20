@@ -1,19 +1,29 @@
 .courses-page-div {
     display: grid;
     grid-template-columns: 1fr, 3fr, 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 15%, 85%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.game-image-div, .course-description-div {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    margin: 10px;
-    background-color: rgb(128,128,128,0.8)
+.course-header {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 1fr, 3fr;
+    grid-template-rows: 1fr;
+    background-color: rgba(128, 128, 128, 0.95);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .courses-div {
     grid-column-start: 2;
     grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -21,10 +31,28 @@
     /* background-color: grey; */
 }
 
-.splash-game-image {
-    max-height: 250px;
-    box-sizing: border-box;
+.game-image-div {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin: 10px;
 }
+
+.course-description-div {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 10px 40px auto 40px;
+}
+
+.course-description-text {
+    text-align: left;
+}
+
+.splash-game-image {
+    max-height: 350px;
+    box-sizing: border-box;
+    border-radius: 10%;
+}
+
 .cup-img {
     height: 200px;
     padding: 20px;
