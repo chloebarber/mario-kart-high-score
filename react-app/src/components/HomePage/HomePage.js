@@ -15,7 +15,7 @@ function HomePage() {
 
     return (
         <>
-            <h1>Mario Kart High Score</h1>
+            {/* <h1>Mario Kart High Score</h1> */}
             <div className = "gameListing">
                 {games.map(game => (
                     <div className = {`game${game.id}`}>

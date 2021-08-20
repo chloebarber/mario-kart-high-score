@@ -20,11 +20,11 @@ const NavBar = () => {
     sessionLinks = (
       <div className="nav-links">
         <NavLink to='/users' exact={true} activeClassName='active' className='all-users-link'>
-          All Users
+          MK Racers!
         </NavLink>
 
         <NavLink to={`/users/${sessionUser.id}`} exact={true} activeClassName='active' className='user-profile-link'>
-          User Profile
+          My Profile
         </NavLink>
 
         <LogoutButton user={sessionUser} className='logout-button' />
@@ -33,19 +33,20 @@ const NavBar = () => {
     )
   } else {
     sessionLinks = (
-      <div className="nav-links">
-        <NavLink to='/sign-up' exact={true} activeClassName='active' className='sign-up-link'>
-          Sign Up
-        </NavLink>
+      <div className='logged-out-div'>
+        <div className="nav-links">
+          <NavLink to='/sign-up' exact={true} activeClassName='active' className='sign-up-link'>
+            Sign Up
+          </NavLink>
 
-        <NavLink to='/login' exact={true} activeClassName='active' className="login-link">
-          Login
-        </NavLink>
+          <NavLink to='/login' exact={true} activeClassName='active' className="login-link">
+            Login
+          </NavLink>
 
-        <div className='demo-div'>
-          <button className="demo-button" onClick={demoUserLogin}>Demo</button>
+          <div className='demo-div'>
+            <button className="demo-button" onClick={demoUserLogin}>Demo</button>
+          </div>
         </div>
-
       </div>
     )
   }
@@ -54,9 +55,14 @@ const NavBar = () => {
     <nav className="nav-bar-container">
       <div className="left-nav">
         <NavLink to='/' exact={true} activeClassName='active' className='home-link'>
-          Home
+          <img src="https://i.imgur.com/Fa4DmJZ.png" alt="baby-mario-logo" className="baby-mario-logo"/>
         </NavLink>
       </div>
+
+      <div className="app-title-div">
+        <a href="/"><h1 className="title-text">Mario Kart High Score</h1></a>
+      </div>
+
       <div className="right-nav">
         {sessionLinks}
       </div>
