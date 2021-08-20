@@ -52,37 +52,41 @@ function User() {
   }
 
   return (
-    <div className="user-container">
-      <div className="user-profile-div">
-        <h2>Profile</h2>
-        <img src={user.user?.character_pfp} />
-        <div><strong>ID:</strong> {userId}</div>
-        <div><strong>Username</strong> {user.user?.username}</div>
-        {/* <div><strong>Email</strong> {user.user?.email}</div> */}
-        {/* <div><strong>Character</strong> {user.user?.character_pfp}</div> */}
-        <div><strong>Bio</strong> {user.user?.bio}</div>
-      </div>
+    <>
 
-      <div className="user-record-div">
-        <h2>User records</h2>
-        {user.record && user.record.map(record => (
-          <div className="record">
-            {timeConversion(record?.time)} {record?.character} <a href={`/course/${record?.course_id}`}>View Course</a>
+      <div className="user-container">
+        <div className="user-profile-div">
+          <h2 className="user-headings">Profile</h2>
+          <img src={user.user?.character_pfp} />
+          <div><strong>ID:</strong> {userId}</div>
+          <div><strong>Username:</strong> {user.user?.username}</div>
+          {/* <div><strong>Email</strong> {user.user?.email}</div> */}
+          {/* <div><strong>Character</strong> {user.user?.character_pfp}</div> */}
+          <div><strong>Bio:</strong> {user.user?.bio}</div>
+        </div>
+
+        <div className="user-record-div">
+          <div className="header-container">
+            <h2 className="user-headings">User records</h2>
           </div>
-        ))}
-      </div>
+          {user.record && user.record.map(record => (
+            <div className="Record">
+              {timeConversion(record?.time)} {record?.character} <a href={`/course/${record?.course_id}`}>View Course</a>
+            </div>
+          ))}
+        </div>
 
-      <div className="user-comment-div">
-        <h2>User Comments</h2>
-        {user.comment && user.comment.map(comment => (
-          <div className="comment">
-            <div>{comment?.content} <a href={`/course/${comment?.course_id}`} >View Course</a></div>
-          </div>
-        ))}
-      </div>
+        <div className="user-comment-div">
+          <h2 className="user-headings">User Comments</h2>
+          {user.comment && user.comment.map(comment => (
+            <div className="comment">
+              <div>{comment?.content} <a href={`/course/${comment?.course_id}`} >View Course</a></div>
+            </div>
+          ))}
+        </div>
 
-
-    </div >
+      </div >
+    </>
   );
 }
 export default User;
