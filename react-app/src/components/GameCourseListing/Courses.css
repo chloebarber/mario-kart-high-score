@@ -30,6 +30,7 @@
     row-gap: 3em;
     background-color: rgba(128, 128, 128, 0.95);
     /* background-color: rgb(66, 191, 229, .8) */
+    padding-bottom: 40px;
 }
 
 .game-image-div {
@@ -57,7 +58,7 @@
 
 .cup-img {
     height: 200px;
-    padding: 38px;
+    padding: 51px;
     /* border-radius: 10%; */
 }
 
@@ -81,6 +82,7 @@
 
 .course-link {
     text-decoration: none;
+    transition: .3s ease;
 }
 
 .splash-course-image {
@@ -91,7 +93,7 @@
 }
 
 .course-link:hover {
-    width: 105%;
+    transform: scale(1.05);
 }
 
 .cup-div {
