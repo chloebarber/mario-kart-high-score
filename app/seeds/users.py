@@ -4,11 +4,11 @@ from app.models import db, User, Game, Course
 # Adds a demo user, you can add other users here if you want
 def seed_users():
     demo = User(
-        username='Demo', email='demo@aa.io', password='password')
+        username='Demo', email='demo@aa.io', password='password', character_pfp="https://mariokart8.nintendo.com/assets/img/drivers/mario_th.png", bio="It's a me, Mario!")
     marnie = User(
-        username='marnie', email='marnie@aa.io', password='password')
+        username='marnie', email='marnie@aa.io', password='password', character_pfp="https://mariokart8.nintendo.com/assets/img/drivers/luigi_th.png", bio="Wee-gee's got it!")
     bobbie = User(
-        username='bobbie', email='bobbie@aa.io', password='password')
+        username='bobbie', email='bobbie@aa.io', password='password', character_pfp="https://mariokart8.nintendo.com/assets/img/drivers/peach_th.png", bio="I baked a cake for you!")
 
     db.session.add(demo)
     db.session.add(marnie)

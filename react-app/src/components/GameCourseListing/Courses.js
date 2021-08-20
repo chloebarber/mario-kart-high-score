@@ -7,6 +7,9 @@ import './Courses.css'
 
 function Courses() {
     const courses = useSelector((state) => state.courses)
+    console.log("Courses variable:", courses)
+    console.log("Game:", courses.game)
+    // console.log("Description:", courses.game.description)
     // const gamesArray = Object.values(games)
     const dispatch = useDispatch()
     const { gameId } = useParams();
@@ -21,14 +24,14 @@ function Courses() {
             return (
                 <>
                     <div className="courses-page-div">
+                        <div className="course-header">
+                            <div className="game-image-div">
+                                <img src={courses?.game.splash_image} className='splash-game-image' alt='gamePic' />
+                            </div>
 
-                        <div className="game-image-div">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="logo holder" />
-                            {/* <img src={game.splash_image} alt="game splash image"/> */}
-                        </div>
-
-                        <div className="course-description-div">
-                            <h1>Test Course Description</h1>
+                            <div className="course-description-div">
+                                <p className="course-description-text">{ courses?.game.description }</p>
+                            </div>
                         </div>
 
                         <div className="courses-div">
