@@ -88,6 +88,10 @@
     margin-bottom: 10px;
 }
 
+.course-link:hover {
+    width: 110%;
+}
+
 .cup-div {
     align-self: center;
     background-color: rgba(255, 0, 0, 0.9);;
