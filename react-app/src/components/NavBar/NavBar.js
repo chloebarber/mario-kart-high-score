@@ -60,7 +60,7 @@ const NavBar = () => {
       </div>
 
       <div className="app-title-div">
-        <h1 className="title-text">Mario Kart High Score</h1>
+        <a href="/"><h1 className="title-text">Mario Kart High Score</h1></a>
       </div>
 
       <div className="right-nav">
