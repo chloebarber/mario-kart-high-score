@@ -28,7 +28,8 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     row-gap: 3em;
-    /* background-color: grey; */
+    background-color: rgba(128, 128, 128, 0.95);
+    /* background-color: rgb(66, 191, 229, .8) */
 }
 
 .game-image-div {
