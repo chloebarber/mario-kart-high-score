@@ -24,7 +24,7 @@ export const createRecord = record => async (dispatch) => {
 }
 
 export const deleteRecord = id => async (dispatch) => {
-    const response = await fetch(`/api/record/${id}`, {
+    const response = await fetch(`/api/record/${id}/`, {
         method: "DELETE",
     })
     if (response.ok) {
