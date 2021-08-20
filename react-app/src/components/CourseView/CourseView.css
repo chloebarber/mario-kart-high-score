@@ -20,18 +20,19 @@
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
 }
 .courseTitle{
-    text-decoration: underline;
     border: 5px solid black;
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
     border-radius: 20px;
-    background: red;
-    color: white;
-    text-shadow: 1px 1px 2px black;
+    background: rgb(4, 156, 216);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px rgb(0, 0, 0);
 }
 
 .courseImages{
@@ -60,11 +61,18 @@
     background-color: gray
 }
 
+.commentsMain h2 {
+    color: rgb(247, 251, 0);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    font-size: 45px;
+}
+
 .comment-div{
     border: 2px solid black;
     border-radius: 20px;
-    margin: 5px;
-    max-width: 55%;
+    font-size: 22px;
+    margin: 0 auto;
+    max-width: 60%;
     padding: 10px;
     box-shadow: 10px 5px 5px black;
     background: rgb(255,254,223);
@@ -72,13 +80,13 @@
 }
 
 .courseText{
-    background: rgb(105,105,105);
-    background: linear-gradient(0deg, rgba(105,105,105,1) 0%, rgba(247,247,247,1) 100%);
+    background: rgb(229, 37, 33);
+    /* background: linear-gradient(0deg, rgba(105,105,105,1) 0%, rgba(247,247,247,1) 100%); */
     border: 5px solid black;
     border-radius: 20px;
     width: 98%;
     margin-bottom: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .commentsAndRecordsContainer{
@@ -90,31 +98,58 @@
 .commentsMain{
     background: rgb(0,97,6);
     background: linear-gradient(0deg, rgba(0,97,6,1) 20%, rgba(0,168,14,1) 100%);
-    width: 65%;
+    width: 55%;
     border: 5px solid black;
     border-radius: 20px;
     margin-right: 5px;
-    align-items: center;
+    padding: 20px;
+
 }
+
+.recordsMain h2 {
+    color: rgb(247, 251, 0);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
+    font-size: 48px;
+    padding: 15px;
+}
+
 .recordsMain{
-    background-color: cyan;
-    width: 35%;
+    background-color: rgb(4, 156, 216);
+    width: 45%;
     border: 5px solid black;
     border-radius: 20px;
     margin-left: 5px;
 }
 .recordsTable{
     width: 100%;
+    padding: 30px;
 }
 
 th{
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid rgb(61, 61, 61);
+    font-size: 30px;
+    color: rgb(247, 251, 0);
+    text-shadow: 0 0 8px rgb(0, 0, 0);
 }
 
 td{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(168, 168, 168);
     border-left: 0px;
     border-right: 0px;
+    font-size: 25px;
+    color: rgb(247, 251, 0);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+td a {
+    text-decoration: none;
+    color: rgb(247, 251, 0);
+}
+
+td a:hover {
+    text-decoration: underline;
+    color: rgb(247, 251, 0);
+    text-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .deleteCommentButton {
@@ -134,4 +169,27 @@ td{
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
     transition: 0.5s;
     cursor: pointer;
+}
+
+.timeStamp {
+    font-size: 18px;
+    color: gray;
+}
+
+.recordDeleteButton {
+    width: 100%;
+    background-color: rgb(255, 251, 0);
+    color: black;
+    border: none;
+    padding: 3px;
+    border-radius: 15px;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.recordDeleteButton:hover {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transition: 0.5s;
+    cursor: pointer;
+
 }

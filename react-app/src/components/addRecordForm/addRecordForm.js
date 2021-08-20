@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { createRecordThunk } from '../../store/courseInfo'
-// import './AddReviewForm.css';
+import './AddRecordForm.css';
 
 const AddRecordForm = () => {
     const sessionUser = useSelector(state => state.session.user)
@@ -36,13 +36,13 @@ const AddRecordForm = () => {
         <div className='record-div'>
             <form className='record-form' onSubmit={handleSubmit}>
                 <div>
-                    <label className="time">Enter your time:
-                        <input type="integer" onChange={createTime}/>
+                    <label className="time">
+                        <input type="integer" placeholder="Enter your time" onChange={createTime}/>
                     </label>
                 </div>
                 <div>
-                    <label className="character">Enter your character:
-                        <input type="text" onChange={createCharacter}/>
+                    <label className="character">Select your character:
+                        <input type="text" placeholder="What do you think about the course?" onChange={createCharacter}/>
                     </label>
                 </div>
 
