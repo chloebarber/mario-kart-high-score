@@ -61,10 +61,11 @@
 }
 
 .comment-div{
-    border: 5px solid black;
+    border: 2px solid black;
     border-radius: 20px;
     margin: 5px;
-    max-width: 60%;
+    max-width: 55%;
+    padding: 10px;
     box-shadow: 10px 5px 5px black;
     background: rgb(255,254,223);
     background: linear-gradient(0deg, rgba(255,254,223,1) 20%, rgba(255,255,178,1) 100%);
@@ -93,6 +94,7 @@
     border: 5px solid black;
     border-radius: 20px;
     margin-right: 5px;
+    align-items: center;
 }
 .recordsMain{
     background-color: cyan;
@@ -113,4 +115,23 @@ td{
     border-bottom: 2px solid black;
     border-left: 0px;
     border-right: 0px;
+}
+
+.deleteCommentButton {
+    width: 20%;
+    background-color: rgb(255, 251, 0);
+    color: black;
+    font-weight: 600;
+    border: none;
+    padding: 3px;
+    border-radius: 15px;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.deleteCommentButton:hover {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    transition: 0.5s;
+    cursor: pointer;
 }
