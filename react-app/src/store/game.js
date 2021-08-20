@@ -14,7 +14,7 @@ export const getGames = () => async (dispatch) => {
 
     if (response.ok) {
         const games = await response.json()
-        console.log(games)
+        // console.log(games)
         await dispatch(loadGames(games))
         return response
     }

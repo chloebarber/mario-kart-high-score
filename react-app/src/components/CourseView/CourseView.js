@@ -28,53 +28,53 @@ function CourseView() {
     let sessionComment;
     let editComment;
 
-    function handleEditComment(e, commentIdToDelete){
+    function handleEditComment(e, commentIdToDelete) {
         e.preventDefault();
         return dispatch(deleteCommentThunk(commentIdToDelete))
-          .catch(async (res) => {
-            const data = await res.json();
-          });
+            .catch(async (res) => {
+                const data = await res.json();
+            });
     }
 
-    function handleDeleteComment(e, commentIdToDelete){
+    function handleDeleteComment(e, commentIdToDelete) {
         e.preventDefault();
         return dispatch(deleteCommentThunk(commentIdToDelete))
-          .catch(async (res) => {
-            const data = await res.json();
-          });
+            .catch(async (res) => {
+                const data = await res.json();
+            });
     }
 
-    function handleDeleteRecord(e, recordIdToDelete){
+    function handleDeleteRecord(e, recordIdToDelete) {
         e.preventDefault();
         return dispatch(deleteRecordThunk(recordIdToDelete))
-          .catch(async (res) => {
-            const data = await res.json();
-          });
+            .catch(async (res) => {
+                const data = await res.json();
+            });
     }
 
-    function userCommentOptions(sessionUser, comment){
-        if (sessionUser && (sessionUser.id === comment.user_id)){
+    function userCommentOptions(sessionUser, comment) {
+        if (sessionUser && (sessionUser.id === comment.user_id)) {
             return (
                 <>
-                <EditCommentForm comment={comment}/>
-                <button onClick={(e) => handleDeleteComment(e, comment.id)}>Delete</button> 
+                    <EditCommentForm comment={comment} />
+                    <button onClick={(e) => handleDeleteComment(e, comment.id)}>Delete</button>
                 </>
             )
-        }      
+        }
     }
-    function userRecordOptions(sessionUser, record){
-        if (sessionUser && (sessionUser.id === record.user_id)){
+    function userRecordOptions(sessionUser, record) {
+        if (sessionUser && (sessionUser.id === record.user_id)) {
             return (
                 <td>
-                <button onClick={(e) => handleDeleteRecord(e, record.id)}>Remove Record</button> 
+                    <button onClick={(e) => handleDeleteRecord(e, record.id)}>Remove Record</button>
                 </td>
             )
-        }      
+        }
     }
-    
 
 
-    if(sessionUser) {
+
+    if (sessionUser) {
         sessionRecord = (
             <>
                 <AddRecordForm />
@@ -148,31 +148,31 @@ function CourseView() {
                 <div className="commentsMain">
                     <h2>Comments</h2>
                     {sessionComment}
-                        {courseInfo.comments && courseInfo.comments.map(comment => (
-                            <div className = "comment-div">
-                                <div>User: {comment.user_id}</div>
-                                <div>Content: {comment.content}</div>
-                                {userCommentOptions(sessionUser, comment)}
-                            </div>
-                        ))}
-                    </div>
-                    <div className = "recordsMain"> 
-                        <h2>Records</h2>
-                        {sessionRecord}
-                        <table className = "recordsTable">
-                            <thead className = "recordsTable">
-                                <tr className = "recordsTable">
-                                    <th>Rank</th>
-                                    <th>User Id</th>
-                                    <th>Time</th>
-                                    <th>Character</th>
-                                </tr>
-                            </thead>
-                            <tbody>
+                    {courseInfo.comments && courseInfo.comments.map(comment => (
+                        <div className="comment-div">
+                            <div>User: {comment.user_id}</div>
+                            <div>Content: {comment.content}</div>
+                            {userCommentOptions(sessionUser, comment)}
+                        </div>
+                    ))}
+                </div>
+                <div className="recordsMain">
+                    <h2>Records</h2>
+                    {sessionRecord}
+                    <table className="recordsTable">
+                        <thead className="recordsTable">
+                            <tr className="recordsTable">
+                                <th>Rank</th>
+                                <th>User Id</th>
+                                <th>Time</th>
+                                <th>Character</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                             {courseInfo.records && courseInfo.records.map(record => (
                                 <tr>
                                     <td>{rankCounter++}</td>
-                                    <td>{record.user_id}</td>
+                                    <td><a href={`/users/${record.user_id}`}>{record.user_id}</a></td>
                                     <td>{timeConversion(record.time)}</td>
                                     <td>{record.character}</td>
                                     {userRecordOptions(sessionUser, record)}
