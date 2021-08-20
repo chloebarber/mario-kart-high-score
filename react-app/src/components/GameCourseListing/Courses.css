@@ -21,6 +21,10 @@
     /* background-color: grey; */
 }
 
+.splash-game-image {
+    max-height: 250px;
+    box-sizing: border-box;
+}
 .cup-img {
     height: 200px;
     padding: 20px;
@@ -28,9 +32,21 @@
 }
 
 .course-text {
-    font-size: 25px;
+    font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: red;
+    background:green;
+    box-shadow:
+    0 0 0 10px white,
+    0 0 0 15px green;
+    border-radius: 20px;
+    margin: 5px;
+    color: white;
+    padding: 5px;
+    /* box-sizing: border-box; */
+    max-width: 80%;
+    margin-left: 9%;
+
 }
 
 .course-link {
@@ -39,8 +55,9 @@
 
 .splash-course-image {
     width: 90%;
-    height: 350px;
+    height: 50%;
     border-radius: 10%;
+    margin-bottom: 10px;
 }
 
 .cup-div {
@@ -50,4 +67,6 @@
 
 .course-and-image-name {
     align-content: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
