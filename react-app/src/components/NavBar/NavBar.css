@@ -5,10 +5,6 @@
     font-size: 25px;
 }
 
-/* .nav-links button {
-    color: purple;
-} */
-
 .nav-bar-container a {
     text-decoration: none;
     /* color: white; */
@@ -98,7 +94,6 @@
 
 .logged-out-div {
     position: relative;
-    background-color: purple;
 }
 
 .demo-button {
