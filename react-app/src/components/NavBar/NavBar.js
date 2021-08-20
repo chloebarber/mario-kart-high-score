@@ -20,11 +20,11 @@ const NavBar = () => {
     sessionLinks = (
       <div className="nav-links">
         <NavLink to='/users' exact={true} activeClassName='active' className='all-users-link'>
-          All Users
+          <h3 className="racers-text">MK Racers!</h3>
         </NavLink>
 
         <NavLink to={`/users/${sessionUser.id}`} exact={true} activeClassName='active' className='user-profile-link'>
-          User Profile
+          <h3 className="profile-text">Profile</h3>
         </NavLink>
 
         <LogoutButton user={sessionUser} className='logout-button' />
@@ -54,9 +54,14 @@ const NavBar = () => {
     <nav className="nav-bar-container">
       <div className="left-nav">
         <NavLink to='/' exact={true} activeClassName='active' className='home-link'>
-          Home
+          <img src="https://i.imgur.com/Fa4DmJZ.png" alt="baby-mario-logo" className="baby-mario-logo"/>
         </NavLink>
       </div>
+
+      <div className="app-title-div">
+        <h1 className="title-text">Mario Kart High Score</h1>
+      </div>
+
       <div className="right-nav">
         {sessionLinks}
       </div>
