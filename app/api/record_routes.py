@@ -7,7 +7,7 @@ record_route = Blueprint('record', __name__)
 
 @record_route.route('/', methods=['POST'])
 def postRecord():
-    form = RecordForm(request.form)
+    form = RecordForm()
     form['csrf_token'].data = request.cookies['csrf_token']
     if form.validate_on_submit():
         data = form.data
@@ -19,6 +19,7 @@ def postRecord():
         db.session.commit()
         return new_record.to_dict()
     return {'error': 'UH OH ERROR'}
+    # return {'request': request.form}
 
 
 @record_route.route('/<int:id>', methods=['PUT'])
@@ -45,4 +46,4 @@ def deleteRecord(id):
     db.session.delete(record)
     db.session.commit()
 
-    return {'success': 'baleeted it 4 u boss'}
+    return record.to_dict()

@@ -1,11 +1,19 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../../store/session';
 import LogoutButton from '.././auth/LogoutButton';
 import './NavBar.css'
 
 const NavBar = () => {
-  const sessionUser = useSelector(state => state.session.user)
+  const sessionUser = useSelector(state => state.session.user);
+  const dispatch = useDispatch();
+
+  const demoUserLogin = async(e) => {
+    e.preventDefault();
+    await dispatch(login('demo@aa.io', 'password'));
+
+  }
 
   let sessionLinks
   if (sessionUser) {
@@ -33,6 +41,10 @@ const NavBar = () => {
         <NavLink to='/login' exact={true} activeClassName='active' className="login-link">
           Login
         </NavLink>
+
+        <div className='demo-div'>
+          <button className="demo-button" onClick={demoUserLogin}>Demo</button>
+        </div>
 
       </div>
     )

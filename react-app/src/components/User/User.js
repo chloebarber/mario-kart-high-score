@@ -7,7 +7,7 @@ function User() {
   const [user, setUser] = useState({});
   const { userId } = useParams();
   // const sessionUser = useSelector(state => state.session.user)
-  console.log(user)
+  // console.log(user)
 
   useEffect(() => {
     if (!userId) {

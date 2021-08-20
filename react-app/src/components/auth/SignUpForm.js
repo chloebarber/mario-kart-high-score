@@ -21,9 +21,12 @@ const SignUpForm = () => {
       const data = await dispatch(signUp(username, email, password, character_pfp, bio));
       if (data) {
         setErrors(data)
+
       }
     }
+
   };
+
 
   const updateUsername = (e) => {
     setUsername(e.target.value);
@@ -55,13 +58,13 @@ const SignUpForm = () => {
 
   return (
     <div>
-      <div class="sign-up-banner">
-        <h1 class="title-sign-up">Sign up now to track</h1>
-        <h1 class="title-sign-up">your high scores!</h1>
-        <img src="https://i.imgur.com/Fa4DmJZ.png" class="img-sign-up-mario" alt='baby mario'></img>
+      <div className="sign-up-banner">
+        <h1 className="title-sign-up">Sign up now to track</h1>
+        <h1 className="title-sign-up">your high scores!</h1>
+        <img src="https://i.imgur.com/Fa4DmJZ.png" className="img-sign-up-mario" alt='baby mario'></img>
       </div>
-      <form class="sign-up-form-container" onSubmit={onSignUp}>
-        <div class="sign-up-errors">
+      <form className="sign-up-form-container" onSubmit={onSignUp}>
+        <div className="sign-up-errors">
           {errors.map((error, ind) => (
             <div key={ind}>{error}</div>
           ))}
@@ -554,9 +557,10 @@ const SignUpForm = () => {
             </label>
           </div>
         </div>
-        <button class="sign-up-button" type='submit'>Sign Up</button>
+        <button className="sign-up-button" type='submit'>Sign Up</button>
       </form >
     </div >
+
   );
 };
 

@@ -23,16 +23,21 @@ h2, h3, p {
 
 .logo-div {
     /* background-color: yellow; */
+    /* position: relative; */
     margin: 10px;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 6;
     max-height: inherit;
+    max-width: 50px;
 }
 
-.logo-img {
+.logo-mario {
+    /* position: absolute; */
     max-height: 80%;
+    margin-left: 100%;
+
 }
 
 .contact-us-div {
