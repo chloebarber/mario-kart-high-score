@@ -57,7 +57,7 @@ function CourseView() {
             return (
                 <>
                     <EditCommentForm comment={comment} />
-                    <button onClick={(e) => handleDeleteComment(e, comment.id)}>Delete</button>
+                    <button className="deleteCommentButton" onClick={(e) => handleDeleteComment(e, comment.id)}>Delete</button>
                 </>
             )
         }

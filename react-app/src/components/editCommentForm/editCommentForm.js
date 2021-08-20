@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { editCommentThunk } from '../../store/courseInfo'
 // import { useParams } from 'react-router-dom';
-// import './AddReviewForm.css';
+import './editCommentForm.css';
 
 const EditCommentForm = (comment) => {
     const sessionUser = useSelector(state => state.session.user)
@@ -34,11 +34,11 @@ const EditCommentForm = (comment) => {
     return (
         <div className='comment-form-div'>
             <form className='comment-form' onSubmit={handleSubmit}>
-                <label className="content">Edit Comment
+                <label className="editContent">Edit Comment
                     <input type="text" onChange={createEditedContent}/>
                 </label>
 
-                <button className='commentSubmit__button' type='submit'>Submit</button>
+                <button className='commentEdit__button' type='submit'>Submit</button>
             </form>
         </div>
     )
