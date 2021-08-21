@@ -55,36 +55,45 @@ function User() {
     <>
 
       <div className="user-container">
-        <div className="user-profile-div">
+        <div className="user-profile-header">
           <h2 className="user-headings">Profile</h2>
-          <img src={user.user?.character_pfp} alt='pfp'/>
+        </div>
+        <div className="user-profile-content">
+          <img src={user.user?.character_pfp} alt='pfp' />
           <div><strong>ID:</strong> {userId}</div>
           <div><strong>Username:</strong> {user.user?.username}</div>
           {/* <div><strong>Email</strong> {user.user?.email}</div> */}
           {/* <div><strong>Character</strong> {user.user?.character_pfp}</div> */}
-          <div><strong>Bio:</strong> {user.user?.bio}</div>
+          <div className="bio-quote">" {user.user?.bio} "</div>
         </div>
 
+        <div className="user-record-header">
+          <h2 className="user-headings">User records</h2>
+        </div>
         <div className="user-record-div">
-          <div className="header-container">
-            <h2 className="user-headings">User records</h2>
-          </div>
           {user.record && user.record.map(record => (
             <div className="Record">
-              {timeConversion(record?.time)} {record?.character} <a href={`/course/${record?.course_id}`}>View Course</a>
+              <a href={`/course/${record?.course_id}`}>
+                <div>
+                  {timeConversion(record?.time)} <span className="user-records-table">-</span> {record?.character}
+                </div>
+              </a>
             </div>
           ))}
         </div>
 
         <div className="user-comment-div">
           <h2 className="user-headings">User Comments</h2>
+        </div>
+        <div className="user-comment-content">
           {user.comment && user.comment.map(comment => (
             <div className="comment">
-              <div>{comment?.content} <a href={`/course/${comment?.course_id}`} >View Course</a></div>
+              <a href={`/course/${comment?.course_id}`} >
+                {comment?.content}
+              </a>
             </div>
           ))}
         </div>
-
       </div >
     </>
   );
