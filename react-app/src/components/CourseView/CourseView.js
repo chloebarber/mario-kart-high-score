@@ -29,21 +29,21 @@ function CourseView() {
 
     let sessionRecord;
     let sessionComment;
-    let editComment;
+    // let editComment;
 
-    function handleEditComment(e, commentIdToDelete) {
-        e.preventDefault();
-        return dispatch(deleteCommentThunk(commentIdToDelete))
-            .catch(async (res) => {
-                const data = await res.json();
-            });
-    }
+    // function handleEditComment(e, commentIdToDelete) {
+    //     e.preventDefault();
+    //     return dispatch(deleteCommentThunk(commentIdToDelete))
+    //         .catch(async (res) => {
+    //             const data = await res.json();
+    //         });
+    // }
 
     function handleDeleteComment(e, commentIdToDelete) {
         e.preventDefault();
         return dispatch(deleteCommentThunk(commentIdToDelete))
             .catch(async (res) => {
-                const data = await res.json();
+                await res.json();
             });
     }
 
@@ -51,7 +51,7 @@ function CourseView() {
         e.preventDefault();
         return dispatch(deleteRecordThunk(recordIdToDelete))
             .catch(async (res) => {
-                const data = await res.json();
+                await res.json();
             });
     }
 
