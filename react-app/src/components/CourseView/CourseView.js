@@ -89,12 +89,12 @@ function CourseView() {
     } else {
         sessionRecord = (
             <>
-                <h2>Log in to post a new record</h2>
+                <h2 className='loginToUse'>-Log in to post a new record-</h2>
             </>
         )
         sessionComment = (
             <>
-                <h2>Log in to leave a comment</h2>
+                <h2 className='loginToUse'>-Log in to leave a comment-</h2>
             </>
         )
     }
