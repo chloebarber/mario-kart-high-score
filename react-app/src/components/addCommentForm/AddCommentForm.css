@@ -3,7 +3,7 @@
     background-color: rgb(255, 251, 0);
     color: black;
     /* font-weight: 600; */
-    border: none;
+    border: 2px solid rgb(172, 172, 172);
     padding: 3px;
     border-radius: 15px;
     font-size: 17px;

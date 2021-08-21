@@ -60,15 +60,17 @@
     padding: 5px;
     /* box-shadow: 5px 5px 10px rgb(251, 208, 0); */
     transition: all 400ms cubic-bezier(0.1, -0.9, 0.2, 0);
+
 }
 
 .baby-mario-logo:hover{
     transform: scale(1.2);
+
 }
 
 .app-title-div {
     /* align-self: end; */
-    margin-left: 1%;
+    margin-left: 0;
     text-align: end;
     position: relative;
     width: 100%;
@@ -79,9 +81,13 @@
     bottom: 0;
     padding: 0px;
     margin: 0px;
-    color: black;
+    /* color: black; */
     font-size: 45px;
     text-align: end;
+
+    background-image: linear-gradient(to left, rgb(0, 183, 255), rgb(0, 255, 8), rgb(251, 208, 0), rgb(255, 209, 2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     /* box-shadow: 20px -1px -1px -1 rgb(251, 208, 0); */
     /* box-shadow: 0px 0px 10px rgb(0, 0, 0); */
 }
