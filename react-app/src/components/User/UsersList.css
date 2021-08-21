@@ -60,3 +60,24 @@ li > a {
       transform: translateY(50px);
     }
 }
+
+.user-info-div {
+    position: relative;
+    /* padding: 100px 15px; */
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+.user-profile-character {
+    float: left;
+    margin-top: 15px;
+    height: 50px;
+    padding-right: 20px;
+}
+
+.user-link {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 80px;
+}

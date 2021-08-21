@@ -16,9 +16,13 @@ function UsersList() {
 
   const userComponents = users.map((user) => {
     return (
-      <li key={user.id}>
-        <NavLink className="user-link" to={`/users/${user.id}`}>{user.username}</NavLink>
-      </li>
+      <div className="user-info-div">
+        {/* <img src={user.character_pfp} alt="user-profile-character" className="user-profile-character"/> */}
+          <li key={user.id}>
+            <NavLink className="user-link" to={`/users/${user.id}`}><img src={user.character_pfp} alt="user-profile-character" className="user-profile-character"/>{user.username}</NavLink>
+            {/* <NavLink className="user-link" to={`/users/${user.id}`}>{user.username}</NavLink> */}
+          </li>
+        </div>
     );
   });
 
