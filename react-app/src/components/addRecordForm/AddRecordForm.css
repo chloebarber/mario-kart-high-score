@@ -1,0 +1,31 @@
+select{
+    background-color: #94cfff;
+    color: rgb(54, 54, 54);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    outline: none;
+    width: 20%;
+    font-family: 'New Super Mario Font U', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 8px 0 15px 0;
+}
+
+.record-form label {
+    color: yellow;
+    font-size: 25px;
+}
+
+.time input {
+    width: 62%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 2px solid rgb(255, 251, 0);
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+    background-color: #94cfff;
+}
