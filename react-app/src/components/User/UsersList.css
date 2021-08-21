@@ -37,7 +37,6 @@ li > a {
 
 .start-img-div {
     position: absolute;
-    /* margin: 5% 0% 0% 2%; */
     margin: 3%;
     -webkit-animation-direction: alternate;
     -webkit-animation: MoveUpDown 3s linear infinite;
@@ -48,7 +47,6 @@ li > a {
     position: absolute;
     left: 0;
     transform: scaleX(-1);
-    /* margin: 10px; */
     animation: MoveUpDown ls linear infinite;
 }
 
@@ -63,7 +61,6 @@ li > a {
 
 .user-info-div {
     position: relative;
-    /* padding: 100px 15px; */
     margin: 0 auto;
     width: 100%;
     text-align: center;
