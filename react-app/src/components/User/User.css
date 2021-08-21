@@ -1,70 +1,126 @@
 .user-container a {
-    color: black;
+    color: white;
+    text-decoration: none;
 }
 
+.user-container a:hover {
+    color: rgb(247, 251, 0);
+}
+
+
 .user-container {
-    background-color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 500px 500px;
     justify-self: center;
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: helvetica, arial, sans-serif;
-}
-
-.user-container .user-headings {
-    background:red;
-    box-shadow:
-    0 0 0 10px hsl(0, 0%, 100%),
-    0 0 0 15px hsl(0, 100%, 50%);
-    border-radius: 20px;
-    margin: 5px;
-    color: white;
-    padding: 5px;
-    box-sizing: border-box;
-}
-
-
-.header-container {
-    background-color: red;
-}
-
-.user-container .user-headings {
-    border: solid 3px #ff0000;
-    padding: 5px;
-    background-clip: content-box;
-    background-color: rgb(255, 0, 0);
-    border-radius: 20px;
-    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 25px;
     letter-spacing: 1px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    box-sizing: border-box;
+
 }
 
+.user-headings {
+    color: #FBD000;
+    text-shadow: 0 0 1px rgb(0, 0, 0);
+    font-size: 28pt;
+}
 
-.user-profile-div {
+.user-profile-header {
+    color: white;
+    background-color: rgb(229, 37, 33);
     grid-column: 1;
-    grid-row: 1;;
-    height: 500px;
-    border: 1px solid black;
+    grid-row: 1;
+    margin-right: 10px;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.user-record-header {
+    grid-column: 2 / span 3;
+    grid-row: 1;
+    background-color: #049CD8;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.user-profile-content {
+    grid-column: 1;
+    grid-row: 2;
+    margin-right: 10px;
+    padding-top: 20px;
+    border-top: none;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 2vw;
+    background-color: rgb(226, 72, 69);
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
 
 .user-record-div {
     grid-column: 2 / span 2;
-    grid-row: 1;
+    grid-row: 2;
     overflow-y: auto;
-    max-height: 500px;
-    border: 1px solid black;
+    height: 300px;
+    background-color: #51b2d8;
+    color: rgb(255, 255, 255);
+    /* text-shadow: 0 0 3px rgb(0, 0, 0); */
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+    /* border-top-left-radius: 25px; */
+    border-top: none;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    border-bottom-left-radius: 25px;
+    /* font-size: 20pt; */
+    font-size: 4vw;
+}
+
+.user-records-table {
+    color: #FBD000;
 }
 
 .user-comment-div {
     grid-column: 1 / span 3;
-    grid-row: 2;
+    grid-row: 3;
+    background-color: #43B047;
+    margin-top: 10px;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: none;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.user-comment-content {
+    grid-column: 1 / span 3;
+    grid-row: 4;
     overflow-y: auto;
-    max-height: 500px;
-    border: 1px solid black;
+    max-height: 400px;
+    padding-top: 20px;
+    border-top: none;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+    border-bottom-left-radius: 25px;
+    color: rgb(255, 255, 255);
+    font-size: 1.75vw;
+    background-color: #58d15c;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
