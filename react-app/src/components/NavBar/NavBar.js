@@ -43,9 +43,8 @@ const NavBar = () => {
             Login
           </NavLink>
 
-          <div className='demo-div'>
-            <button className="demo-button" onClick={demoUserLogin}>Demo</button>
-          </div>
+          <button className="demo-button" onClick={demoUserLogin}>Demo</button>
+
         </div>
       </div>
     )

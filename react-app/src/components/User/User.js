@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import './User.css'
 
 function User() {
@@ -57,7 +57,7 @@ function User() {
       <div className="user-container">
         <div className="user-profile-div">
           <h2 className="user-headings">Profile</h2>
-          <img src={user.user?.character_pfp} />
+          <img src={user.user?.character_pfp} alt='pfp'/>
           <div><strong>ID:</strong> {userId}</div>
           <div><strong>Username:</strong> {user.user?.username}</div>
           {/* <div><strong>Email</strong> {user.user?.email}</div> */}

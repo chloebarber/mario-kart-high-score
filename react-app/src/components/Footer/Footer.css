@@ -7,10 +7,17 @@ h2, h3, p {
     /* background-color: red; */
     display: grid;
     grid: 2em 2em 2em 2em 2em / repeat(6, 1fr);
-    max-height: 150px;
+    max-height: 165px;
     background: rgb(83,79,77);
     background: linear-gradient(0deg, rgba(83,79,77,1) 30%, rgba(255,255,255,1) 100%);
     margin-top: 15px;
+    bottom: 0;
+
+    width: 100%;
+
+    /* negative value of footer height */
+
+
 }
 
 .footer-text {
@@ -33,38 +40,45 @@ h2, h3, p {
     max-width: 50px;
 }
 
-.logo-mario {
+.logo-bowser {
     /* position: absolute; */
-    max-height: 80%;
+    max-height: 95%;
     margin-left: 100%;
+    transform: scaleX(-1);
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
 
 }
 
-.contact-us-div {
+/* .contact-us-div {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
-    /* background-color: purple; */
-}
+    background-color: purple;
+} */
 
-.contact-text {
+/* .contact-text {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: left;
-}
+} */
 
 .repo-text {
+    top: 0;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .github-icon {
     height: 40px;
     margin: 10px;
+    /* -webkit-filter: drop-shadow(5px 5px 5px #000000); */
+
 }
 
 .linkedin-icon {
     height: 50px;
     margin: 5px;
+    /* -webkit-filter: drop-shadow(1px 1px 1px #000000); */
+
 }
 
 .chloe {
@@ -72,6 +86,7 @@ h2, h3, p {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+
     /* background-color: royalblue; */
 }
 
@@ -99,8 +114,52 @@ h2, h3, p {
     /* background-color: pink; */
 }
 
-.developer > h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.chloe-developer h3 {
+    padding-top: 25px;
+    color: rgb(4, 156, 216);
+    /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
+    font-size: 30px;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+}
+
+.chloe-developer a {
+    filter: drop-shadow(2px 2px 2px rgb(4, 156, 216));
+}
+
+.antonio-developer h3 {
+    padding-top: 25px;
+    color: rgb(251, 208, 0);
+    /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
+    font-size: 26px;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+}
+
+.antonio-developer a {
+    filter: drop-shadow(2px 2px 2px rgb(251, 208, 0));
+}
+
+.ji-developer h3 {
+    padding-top: 25px;
+    color: rgb(229, 37, 33);
+    /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
+    font-size: 30px;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+}
+
+.ji-developer a {
+    filter: drop-shadow(2px 2px 2px rgb(229, 37, 33));
+}
+
+.meagan-developer h3 {
+    padding-top: 25px;
+    color: rgb(67, 176, 71);
+    /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
+    font-size: 30px;
+    text-shadow: 2px 0 0 #000, 0 -1px 1px #000, 0 2px 0 #000, -1px 0 1px #000;
+}
+
+.meagan-developer a {
+    filter: drop-shadow(2px 2px 2px rgb(67, 176, 71));
 }
 
 .github-repo-div {
@@ -115,10 +174,25 @@ h2, h3, p {
     text-decoration: none;
 }
 
-h2 > a:hover {
-    text-decoration: none;
-    color: red;
-}
+.github-repo-div h2 {
+    background: linear-gradient(to right, rgb(229, 37, 33),rgb(251, 208, 0),rgb(67, 176, 71), rgb(4, 156, 216));
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    color:rgba(0,0,0,1);
+    font-size:30px;
+    transition: color .2s ease-in-out;
+    text-transform:uppercase;
+  }
+  .github-repo-div h2:hover{
+    color:rgba(0,0,0,0);
+  }
+
+  @keyframes rainbow {
+    0%{background-position:left}
+    50%{background-position:right}
+    100%{background-position:left}
+  }
 
 .acknowledge {
     grid-column-start: 1;
@@ -137,4 +211,5 @@ h2 > a:hover {
 
 .acknowledge-text > a{
     color: black;
+    font-weight: 900;
 }

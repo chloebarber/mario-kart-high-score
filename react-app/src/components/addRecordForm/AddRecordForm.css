@@ -6,7 +6,7 @@ select{
     border-radius: 15px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     outline: none;
-    width: 35%;
+    width: 45%;
     font-family: 'New Super Mario Font U', sans-serif;
     font-size: 20px;
     cursor: pointer;
@@ -16,7 +16,8 @@ select{
 .record-form label {
     color: yellow;
     font-size: 25px;
-    text-shadow: 0 0 10px rgb(0, 0, 0);
+    /* text-shadow: 0 0 10px rgb(0, 0, 0); */
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
 
 .time input {
@@ -46,7 +47,7 @@ select{
     background-color: rgb(255, 251, 0);
     color: black;
     /* font-weight: 600; */
-    border: none;
+    border: 2px solid rgb(0, 0, 0);
     padding: 3px;
     border-radius: 15px;
     font-size: 17px;

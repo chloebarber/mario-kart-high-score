@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import TextField, IntegerField, StringField, BooleanField, SelectField, SubmitField, HiddenField
+from wtforms import TextField, IntegerField, SubmitField
 from wtforms.validators import DataRequired
 
 
@@ -13,4 +13,6 @@ class CommentForm(FlaskForm):
     content = TextField("Content: ", v)
     submit = SubmitField("Submit")
     # selectField will need a better character list
-    # character = SelectField("Character: ", v, choices=["Mario", "Luigi", "Peach", "Bowser", "Wario", "Yoshi"])
+    # character = SelectField("Character: ", v, choices=[
+    # "Mario", "Luigi", "Peach", "Bowser", "Wario", "Yoshi"
+    # ])
