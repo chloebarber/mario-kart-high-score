@@ -22,7 +22,8 @@
     margin-right: 10%;
     color: rgb(255, 255, 255);
     font-size: 28px;
-    text-shadow: 0 0 5px rgb(0, 0, 0);
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+    /* text-shadow: 0 0 5px rgb(0, 0, 0); */
 }
 .courseTitle{
     border: 5px solid black;
@@ -33,6 +34,7 @@
     background: rgb(4, 156, 216);
     color: rgb(255, 255, 255);
     text-shadow: 0 0 15px rgb(0, 0, 0);
+    /* text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000; */
 }
 
 .courseImages{
@@ -109,6 +111,7 @@
 .recordsMain h2 {
     color: rgb(247, 251, 0);
     text-shadow: 0 0 10px rgb(0, 0, 0);
+    /* text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000; */
     font-size: 48px;
     padding: 15px;
 }
@@ -129,7 +132,8 @@ th{
     border-bottom: 5px solid rgb(61, 61, 61);
     font-size: 30px;
     color: rgb(247, 251, 0);
-    text-shadow: 0 0 8px rgb(0, 0, 0);
+    /* text-shadow: 0 0 8px rgb(0, 0, 0); */
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
 
 td{
@@ -138,12 +142,14 @@ td{
     border-right: 0px;
     font-size: 25px;
     color: rgb(247, 251, 0);
-    text-shadow: 0 0 5px rgb(0, 0, 0);
+    /* text-shadow: 0 0 5px rgb(0, 0, 0); */
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
 
 td a {
     text-decoration: none;
     color: rgb(247, 251, 0);
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
 
 td a:hover {
@@ -157,7 +163,7 @@ td a:hover {
     background-color: rgb(255, 251, 0);
     color: black;
     /* font-weight: 600; */
-    border: 2px solid rgb(172, 172, 172);
+    border: 2px solid rgb(0, 0, 0);
     padding: 3px;
     border-radius: 15px;
     font-size: 17px;
