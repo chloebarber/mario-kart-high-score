@@ -1,14 +1,15 @@
 .commentEdit__button {
-    width: 20%;
+    width: 10em;
     background-color: rgb(255, 251, 0);
     color: black;
-    font-weight: 600;
+    /* font-weight: 600; */
     border: none;
     padding: 3px;
     border-radius: 15px;
     font-size: 17px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-family: 'New Super Mario Font U', sans-serif;
 }
 
 .commentEdit__button:hover {
