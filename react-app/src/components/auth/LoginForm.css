@@ -8,44 +8,46 @@
 
 .login-form-container {
     padding-top: 20px;
-    background-color: white;
+    background-color: #FBD000;
     border: 1px solid grey;
 }
 
 .login-form-container label {
-    font-family: arial,sans-serif;
-    font-size: 12pt;
-    color: grey;
+    font-size: 24pt;
+    color: #43B047;
     font-weight: bold;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
 
 .login-form-container input {
     display: block;
     margin: auto;
     outline: 0;
-    border: 2px solid lightgrey;
-    border-radius: 5px;
-    height: 30px;
-    width: 300px;
+    border: 5px solid black;
+    border-radius: 25px;
+    height: 40px;
+    width: 400px;
     margin-top: 10px;
     margin-bottom: 20px;
+    font-family: 'New Super Mario Font U', sans-serif;
+    font-size: 18pt;
+    text-align: center;
 }
 
 .login-form-container input:focus {
     border-color: red;
 }
 
-
 .login-button {
     background-color: red;
     border-radius: 25px;
     color: white;
-    border: none;
+    border: 5px solid black;
     width: 300px;
-    height: 40px;
+    height: 50px;
     margin-top: 20px;
     margin-bottom: 100px;
-    font-size: 15pt;
+    font-size: 24pt;
     font-family: 'New Super Mario Font U', sans-serif;
     text-transform: uppercase;
     text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
