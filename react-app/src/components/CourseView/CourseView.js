@@ -17,6 +17,9 @@ function CourseView() {
     // const comments = useSelector(state => Object.values(state.games.courseInfo.comments))
     // const records = useSelector(state => Object.values(state.games.courseInfo.records))
 
+
+
+
     const dispatch = useDispatch()
     const { courseId } = useParams();
 
@@ -26,21 +29,21 @@ function CourseView() {
 
     let sessionRecord;
     let sessionComment;
-    let editComment;
+    // let editComment;
 
-    function handleEditComment(e, commentIdToDelete) {
-        e.preventDefault();
-        return dispatch(deleteCommentThunk(commentIdToDelete))
-            .catch(async (res) => {
-                const data = await res.json();
-            });
-    }
+    // function handleEditComment(e, commentIdToDelete) {
+    //     e.preventDefault();
+    //     return dispatch(deleteCommentThunk(commentIdToDelete))
+    //         .catch(async (res) => {
+    //             const data = await res.json();
+    //         });
+    // }
 
     function handleDeleteComment(e, commentIdToDelete) {
         e.preventDefault();
         return dispatch(deleteCommentThunk(commentIdToDelete))
             .catch(async (res) => {
-                const data = await res.json();
+                await res.json();
             });
     }
 
@@ -48,7 +51,7 @@ function CourseView() {
         e.preventDefault();
         return dispatch(deleteRecordThunk(recordIdToDelete))
             .catch(async (res) => {
-                const data = await res.json();
+                await res.json();
             });
     }
 
@@ -66,7 +69,7 @@ function CourseView() {
         if (sessionUser && (sessionUser.id === record.user_id)) {
             return (
                 <td>
-                    <button onClick={(e) => handleDeleteRecord(e, record.id)}>Remove Record</button>
+                    <button className='recordDeleteButton' onClick={(e) => handleDeleteRecord(e, record.id)}>❌</button>
                 </td>
             )
         }
@@ -86,12 +89,12 @@ function CourseView() {
     } else {
         sessionRecord = (
             <>
-                <h2>Log in to post a new record</h2>
+                <h2 className='loginToUse'>-Log in to post a new record-</h2>
             </>
         )
         sessionComment = (
             <>
-                <h2>Log in to leave a comment</h2>
+                <h2 className='loginToUse'>-Log in to leave a comment-</h2>
             </>
         )
     }
@@ -146,25 +149,26 @@ function CourseView() {
             {courseInfo.course && courseDescription()}
             <div className="commentsAndRecordsContainer">
                 <div className="commentsMain">
-                    <h2>Comments</h2>
+                    <h2>🍄 COMMENTS 🍄</h2>
                     {sessionComment}
                     {courseInfo.comments && courseInfo.comments.map(comment => (
                         <div className="comment-div">
-                            <div>User: {comment.user_id}</div>
-                            <div>Content: {comment.content}</div>
+                            <div className="commentFormTitle">User: {comment.user_id}</div>
+                            <div className='timeStamp'>🕑 {new Date(comment.created_at).toLocaleString()}</div>
+                            <div className="commentFormContent">{comment.content}</div>
                             {userCommentOptions(sessionUser, comment)}
                         </div>
                     ))}
                 </div>
                 <div className="recordsMain">
-                    <h2>Records</h2>
+                    <h2>🏁 RECORDS 🏁</h2>
                     {sessionRecord}
                     <table className="recordsTable">
                         <thead className="recordsTable">
                             <tr className="recordsTable">
-                                <th>Rank</th>
+                                <th>Rank🥇</th>
                                 <th>User Id</th>
-                                <th>Time</th>
+                                <th>Time⏱</th>
                                 <th>Character</th>
                             </tr>
                         </thead>
@@ -182,8 +186,8 @@ function CourseView() {
                     </table>
                 </div>
             </div>
-        </div>
+            </div>
 
-    )
+            )
 }
-export default CourseView;
+            export default CourseView;

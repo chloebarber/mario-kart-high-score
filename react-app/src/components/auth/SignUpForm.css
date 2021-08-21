@@ -1,6 +1,5 @@
 .sign-up-banner {
     background-color: red;
-    height: 300px;
 }
 
 .title-sign-up {
@@ -12,7 +11,20 @@
     padding-left: 100px;
     padding-top: 70px;
     line-height: .5;
+    font-family: 'New Super Mario Font U', sans-serif;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
 }
+
+.sign-up-banner {
+    width: 100%;
+    height: 280px;
+    animation: animateCloud 70s linear infinite;
+    background-image: url(https://png2.cleanpng.com/sh/dc39aa3805444bfc9d4668127b851127/L0KzQYi4UsA3N2pmfpGAYUK7c4jqgck3a2JmSpC6NUm3RIq4UcE2OWM7SqQ5Mka5QYi8TwBvbz==/5a28c7ca96c1a2.1594491115126220266175.png);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    background-size: 60%;
+  }
+  @keyframes animateCloud  {0% {background-position: 0 0;}100% {background-position: 1280px 0;}}
 
 .img-sign-up-mario {
     width: 340px;
@@ -60,8 +72,15 @@
     height: 40px;
     margin-top: 20px;
     margin-bottom: 100px;
-    font-size: 12pt;
+    font-size: 15pt;
+    font-family: 'New Super Mario Font U', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+}
 
+.sign-up-button:hover {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 .sign-up-errors {
