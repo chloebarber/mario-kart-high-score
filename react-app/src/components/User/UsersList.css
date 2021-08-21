@@ -1,0 +1,62 @@
+.user-list-div {
+    background-color: rgba(229, 37, 33, .5);
+    background-color: rgb(247, 251, 0);
+    margin: 5% 20% 5% 20%;
+    border: 5px solid black;
+    border-radius: 20px;
+    position: relative;
+}
+
+li {
+    font-size: 40px;
+    list-style: none;
+    margin-bottom: 15px;
+    transition: .3s ease;
+}
+
+li:hover {
+    transform: scale(1.05);
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+}
+
+li > a {
+    text-decoration: none;
+    color: rgb(0, 255, 8);
+    text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+    transition: .3s ease;
+}
+
+
+.mk-racers-text {
+    background-size: 150% 150%;
+    text-shadow: 2px 0 0 rgb(0, 183, 255), 0 -1px 0 #000, 0 2px 0 rgb(229, 37, 33), -1px 0 0 rgb(0, 255, 8);
+    -webkit-text-fill-color: transparent;
+    padding: 0;
+    margin: 3% 2% 2% 5%;
+}
+
+.start-img-div {
+    position: absolute;
+    /* margin: 5% 0% 0% 2%; */
+    margin: 3%;
+    -webkit-animation-direction: alternate;
+    -webkit-animation: MoveUpDown 3s linear infinite;
+
+}
+.start-img {
+    max-height: 150px;
+    position: absolute;
+    left: 0;
+    transform: scaleX(-1);
+    /* margin: 10px; */
+    animation: MoveUpDown ls linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 50% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+}
