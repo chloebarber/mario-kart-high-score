@@ -120,6 +120,7 @@ h2, h3, p {
     /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
     font-size: 30px;
     text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+    filter: drop-shadow(5px 5px 4px rgb(0, 0, 0));
 }
 
 .chloe-developer a {
@@ -132,6 +133,7 @@ h2, h3, p {
     /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
     font-size: 26px;
     text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .antonio-developer a {
@@ -144,6 +146,7 @@ h2, h3, p {
     /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
     font-size: 30px;
     text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 2px 0 #000, -1px 0 0 #000;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .ji-developer a {
@@ -156,6 +159,7 @@ h2, h3, p {
     /* text-shadow: 1px 1px 5px rgb(0, 0, 0); */
     font-size: 30px;
     text-shadow: 2px 0 0 #000, 0 -1px 1px #000, 0 2px 0 #000, -1px 0 1px #000;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .meagan-developer a {
