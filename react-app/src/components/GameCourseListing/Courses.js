@@ -7,8 +7,6 @@ import './Courses.css'
 
 function Courses() {
     const courses = useSelector((state) => state.courses)
-    console.log("Courses variable:", courses)
-    console.log("Game:", courses.game)
     // console.log("Description:", courses.game.description)
     // const gamesArray = Object.values(games)
     const dispatch = useDispatch()

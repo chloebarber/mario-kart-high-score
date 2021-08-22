@@ -21,7 +21,7 @@ select{
 }
 
 .time input {
-    width: 60%;
+    width: 30%;
     box-sizing: border-box;
     border-radius: 15px;
     border: none;

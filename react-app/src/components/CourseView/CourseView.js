@@ -14,10 +14,6 @@ function CourseView() {
     const sessionUser = useSelector(state => state.session.user)
 
     const courseInfo = useSelector((state) => state.courseInfo)
-    // const comments = useSelector(state => Object.values(state.games.courseInfo.comments))
-    // const records = useSelector(state => Object.values(state.games.courseInfo.records))
-
-
 
 
     const dispatch = useDispatch()
@@ -29,15 +25,6 @@ function CourseView() {
 
     let sessionRecord;
     let sessionComment;
-    // let editComment;
-
-    // function handleEditComment(e, commentIdToDelete) {
-    //     e.preventDefault();
-    //     return dispatch(deleteCommentThunk(commentIdToDelete))
-    //         .catch(async (res) => {
-    //             const data = await res.json();
-    //         });
-    // }
 
     function handleDeleteComment(e, commentIdToDelete) {
         e.preventDefault();
@@ -173,7 +160,7 @@ function CourseView() {
                             </tr>
                         </thead>
                         <tbody>
-                            {courseInfo.records && courseInfo.records.map(record => (
+                            {courseInfo.records && courseInfo.records.sort(function (a, b){return a.time - b.time}) && courseInfo.records.map(record => (
                                 <tr>
                                     <td>{rankCounter++}</td>
                                     <td><a href={`/users/${record.user_id}`}>{record.user_id}</a></td>

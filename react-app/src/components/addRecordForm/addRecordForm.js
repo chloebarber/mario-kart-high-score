@@ -10,22 +10,30 @@ const AddRecordForm = () => {
     const dispatch = useDispatch();
 
     // const [course_id, setCourse_id] = useState(courseInfo.course.id);
-    const [time, setTime] = useState();
-    const [character, setCharacter] = useState()
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
+    const [ms, setMs] = useState(0);
+    const [character, setCharacter] = useState("Mario")
     // console.log(+listing)
 
-    // const createUserId = (e) => setUser_id(e.target.value);
-    // const createCourse_Id = (e) => setCourse_id(e.target.value);
-    const createTime = (e) => setTime(e.target.value);
+    const createMinutes = (e) => setMinutes(e.target.value);
+    const createSeconds = (e) => setSeconds(e.target.value);
+    const createMs = (e) => setMs(e.target.value);
     const createCharacter = (e) => setCharacter(e.target.value);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (+seconds > 59 || +ms > 1000){
+            alert("Please input a valid time")
+            return;
+        }
+        const time = (+minutes * 60000) + (+seconds * 1000) + +ms;
+        // console.log(time)
 
         const addRecord = {
            user_id: sessionUser.id,
            course_id:courseInfo.course.id,
-           time: +time,
+           time: time,
            character
         };
         await dispatch(createRecordThunk(addRecord))
@@ -36,9 +44,12 @@ const AddRecordForm = () => {
         <div className='record-div'>
             <form className='record-form' onSubmit={handleSubmit}>
                 <div className='time-div'>
-                    <label className="time">
-                        <input type="integer" placeholder="Enter your time in milliseconds" onChange={createTime}/>
-                    </label>
+                    <label>Enter your time:</label>
+                    <div className="time">
+                        <input type="integer" placeholder="Minutes" onChange={createMinutes}/>
+                        <input type="integer" placeholder="Seconds" onChange={createSeconds}/>
+                        <input type="integer" placeholder="Milliseconds" onChange={createMs}/>
+                    </div>
                 </div>
                 <label>Select a character: </label>
                 <div className="select-list">
