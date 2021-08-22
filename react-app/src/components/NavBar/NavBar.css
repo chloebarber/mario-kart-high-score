@@ -40,6 +40,7 @@
     /* color:rgba(0,0,0,1); */
     font-size:30px;
     transition: color .2s ease-in-out;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .all-users-link:hover {
@@ -56,6 +57,7 @@
     /* color:rgba(0,0,0,1); */
     font-size:30px;
     transition: color .2s ease-in-out;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .login-link:hover {
@@ -72,6 +74,7 @@
     font-size:30px;
     transition: color .2s ease-in-out;
     /* text-transform:uppercase; */
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .sign-up-link:hover {
@@ -94,6 +97,7 @@
     /* color:rgba(0,0,0,1); */
     font-size:30px;
     transition: color .2s ease-in-out;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 .user-profile-link:hover {
@@ -156,6 +160,7 @@
     text-transform:uppercase;
     background-image: linear-gradient(to left, rgb(0, 183, 255), rgb(0, 255, 8), rgb(251, 208, 0), rgb(238, 255, 2));
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 
