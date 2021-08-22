@@ -12,6 +12,7 @@ li {
     list-style: none;
     margin-bottom: 15px;
     transition: .3s ease;
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
 li:hover {
@@ -48,6 +49,7 @@ li > a {
     left: 0;
     transform: scaleX(-1);
     animation: MoveUpDown ls linear infinite;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
 }
 
 @keyframes MoveUpDown {

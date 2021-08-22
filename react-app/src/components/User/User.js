@@ -59,7 +59,7 @@ function User() {
           <h2 className="user-headings">Profile</h2>
         </div>
         <div className="user-profile-content">
-          <img src={user.user?.character_pfp} alt='pfp' />
+          <img className='pfp' src={user.user?.character_pfp} alt='pfp' />
           <div><strong>ID:</strong> {userId}</div>
           <div><strong>Username:</strong> {user.user?.username}</div>
           {/* <div><strong>Email</strong> {user.user?.email}</div> */}

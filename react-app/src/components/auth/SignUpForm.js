@@ -125,7 +125,7 @@ const SignUpForm = () => {
           ></input>
         </div>
 
-        <div className="character-select-container">
+        <div className="character-select-container">Select a profile character
           <div className="character-select-rows">
             <input
               name="character-select"
