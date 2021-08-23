@@ -1,5 +1,5 @@
 # ![Mario](https://emojis.slackmojis.com/emojis/images/1450319446/47/mario.gif?1450319446) Mario Kart High Score 
-this is a clone of MapMyRun but it's where users can save record course times and comments on Mario Kart video games. 
+is a clone of MapMyRun where users can save record course times and post comments on Mario Kart video games. 
 
 # Website walk-through
 ![123](https://user-images.githubusercontent.com/79862908/130370698-7e7df97c-6b0e-4dc0-af46-f1bfb5c4da4a.gif)
