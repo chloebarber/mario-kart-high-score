@@ -1,17 +1,47 @@
-# ![Mario](https://emojis.slackmojis.com/emojis/images/1450319446/47/mario.gif?1450319446) Mario Kart High Score 
-is a clone of MapMyRun where users can save record course times and post comments on Mario Kart video games. 
+# ![Mario](https://emojis.slackmojis.com/emojis/images/1450319446/47/mario.gif?1450319446)Welcome to Mario Kart High Score 
+Mario Kart High Score is an app based on the the Map My Run website that allows users to record their race times for their favorite Mario Kart courses and add comments about their race experience. Mario Kart High Score was created using Flask, React, and Redux.
 
-# Website walk-through
+A live link to the website can be found here: https://mk-highscores.herokuapp.com/
+
+## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Website walk-through
+##### Homepage, Course Page, Sign Up Page, Login Page
 ![123](https://user-images.githubusercontent.com/79862908/130370698-7e7df97c-6b0e-4dc0-af46-f1bfb5c4da4a.gif)
+
+##### Course Page in detail, showing CRUD functions for user comments and user records
 ![12345](https://user-images.githubusercontent.com/79862908/130370717-2db9871a-ec0b-4069-b70f-82c2449139ca.gif)
+
+##### MK Racers Page (full user list) and My Profile Page (showing user profile)
 ![123456](https://user-images.githubusercontent.com/79862908/130370730-e517e717-7a21-4705-ac96-2e2d3de3a57f.gif)
 
+## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Features
+* Sign up/in with email and password
+* Explore all the courses from every Mario Kart Game
+* Leave comments on any courses
+* Post your high score achievements on a course page to see how you rank
+* Customize your user profile page from a list 42 pre-selected avatars and a custom bio
 
-# Flask React Project
+## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Future Features
+* Add/Remove friends
+* Friend list
+* Search 
 
-This is the starter for the Flask React project.
 
-## Getting started
+## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Technologies used to build the website
+### Backend
+* Flask
+* Python
+* JavaScript
+* PostgresSQL
+* SQLAlchemy
+* WTForms
+### Frontend
+* React
+* JavaScript
+* CSS3
+* HTML5
+* Heroku
+
+## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Getting started
 
 1. Clone this repository (only this branch)
 
@@ -141,3 +171,8 @@ of your Heroku app in the url and tag name:
    ```bash=3
    docker push registry.heroku.com/{NAME_OF_HEROKU_APP}/web
    ```
+## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Mario Kart High Score created by:
+- [@chloebarber](https://github.com/chloebarber) ![Coin-pip](https://github.com/snipe/awesome-emoji/blob/master/gaming/mario/Coin-Pip.gif?raw=true)
+- [@meagan13](https://github.com/meagan13) ![Coin-pip](https://github.com/snipe/awesome-emoji/blob/master/gaming/mario/Coin-Pip.gif?raw=true)
+- [@ji-k](https://github.com/ji-k) ![Coin-pip](https://github.com/snipe/awesome-emoji/blob/master/gaming/mario/Coin-Pip.gif?raw=true)
+- [@D3vila](https://github.com/D3vila) ![Coin-pip](https://github.com/snipe/awesome-emoji/blob/master/gaming/mario/Coin-Pip.gif?raw=true)
