@@ -136,7 +136,7 @@ export default AddCommentForm;
 
 ```
 
-## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Mario Kart High Score created by: 
+## ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113) Mario Kart High Score created by: ![Bowser](https://emojis.slackmojis.com/emojis/images/1494971113/2264/bowsermariokart.gif?1494971113)
 ![Coin-pip](https://github.com/snipe/awesome-emoji/blob/master/gaming/mario/Coin-Pip.gif?raw=true) [@chloebarber](https://github.com/chloebarber) 
 ![Coin-pip](https://github.com/snipe/awesome-emoji/blob/master/gaming/mario/Coin-Pip.gif?raw=true) [@meagan13](https://github.com/meagan13) 
 ![Coin-pip](https://github.com/snipe/awesome-emoji/blob/master/gaming/mario/Coin-Pip.gif?raw=true) [@ji-k](https://github.com/ji-k) 
