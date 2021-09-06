@@ -1,5 +1,5 @@
 # ![Mario](https://emojis.slackmojis.com/emojis/images/1450319446/47/mario.gif?1450319446) Welcome to Mario Kart High Score ![Mario](https://emojis.slackmojis.com/emojis/images/1450319446/47/mario.gif?1450319446)
-Mario Kart High Score is an app based on the the Map My Run website that allows users to record their race times for their favorite Mario Kart courses and add comments about their race experience. Mario Kart High Score was created using Flask, React, and Redux.
+Mario Kart High Score is an app based on the Map My Run website that allows users to record their race times for their favorite Mario Kart courses and add comments about their race experience. Mario Kart High Score was created using Flask, React, and Redux.
 
 **A live link to the website can be found here: https://mk-highscores.herokuapp.com/**
 
